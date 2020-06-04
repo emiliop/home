@@ -1,0 +1,275 @@
+.transparency-banner {
+  color: $white;
+  background: url("../images/img_transparency_banner.png") no-repeat center 100% / cover;
+  text-align: center;
+
+  .transparency-banner-title {
+    font-family: 'FuturaPTDemi';
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .transparency-banner-body {
+    font-family: 'WorkSans-Regular';
+    font-size: 1em;
+    margin-bottom: 30px;
+    padding: 0 10%;
+  }
+
+  .btn-outline-primary {
+    background-color: $white;
+    margin-bottom: 70px;
+  }
+}
+
+.transparency-content {
+  margin-top: -40px;
+  background: url("../images/bg-transparency.png") no-repeat 100% 80% / 40% auto;
+}
+
+#transparency-lvl3-buttons {
+  background-color: $blue-light;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 5px 5px 5px 0 rgba($blue-dark,0.2);
+
+  .btn-tranparency {
+    width: 100%;
+    background-color: $blue-light;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat-Medium';
+    line-height: 1.2;
+    color: $white;
+    padding: 10px;
+    font-size: 0.9em;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $white;
+    }
+
+    &::before {
+      min-width: 60px;
+      height: 50px;
+      background-image: url("../images/img_sprite-transparency.png");
+      margin-right: 15px;
+      background-position-x: -22px;
+      transform: scale(0.7);
+      margin-left: -10px;
+      margin-top: -10px;
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: $blue-semilight;
+      color: $blue-light;
+
+      &::before {
+        background-position-x: -110px;
+      }
+    }
+
+    &.btn-1 {
+      &::before {
+        background-position-y: -12px;
+      }
+    }
+
+    &.btn-2 {
+      &::before {
+        background-position-y: -80px;
+      }
+    }
+
+    &.btn-3 {
+      &::before {
+        background-position-y: -143px;
+      }
+    }
+
+    &.btn-4 {
+      &::before {
+        background-position-y: -211px;
+      }
+    }
+
+    &.btn-5 {
+      &::before {
+        background-position-y: -273px;
+      }
+    }
+
+    &.btn-6 {
+      &::before {
+        background-position-y: -337px;
+      }
+    }
+
+    &.btn-7 {
+      &::before {
+        background-position-y: -407px;
+      }
+    }
+
+    &.btn-8 {
+      &::before {
+        background-position-y: -473px;
+      }
+    }
+
+    &.btn-9 {
+      &::before {
+        background-position-y: -534px;
+      }
+    }
+
+    &.btn-10 {
+      &::before {
+        background-position-y: -605px;
+      }
+    }
+
+    &.btn-11 {
+      &::before {
+        background-position-y: -668px;
+      }
+    }
+
+    &.btn-12 {
+      &::before {
+        background-position-y: -734px;
+      }
+    }
+
+    &.btn-13 {
+      &::before {
+        background-position-y: -797px;
+      }
+    }
+  }
+}
+
+#transparency-lvl3-container {
+  .transparency-section-container {
+    border: 2px solid $gray-light;
+    padding: 20px 20px 20px 0;
+    background-color: $white;
+    box-shadow: 5px 5px 5px 0 rgba($blue-dark,0.2);
+    @include border-radius(20px);
+  }
+
+  .transparency-section-title {
+    display: flex;
+    align-items: center;
+    font-family: 'FuturaStd-Bold';
+    line-height: 1.1;
+    font-size: 1.3em;
+    color: $blue-dark;
+
+    &::before {
+      content: "";
+      min-width: 84px;
+      height: 84px;
+      background-image: url("../images/img_sprite-transparency.png");
+      margin: 0 15px;
+      background-position-x: -222px;
+    }
+
+    &.title-1 {
+      &::before {
+        background-position-y: -3px;
+      }
+    }
+
+    &.title-2 {
+      &::before {
+        background-position-y: -96px;
+      }
+    }
+
+    &.title-3 {
+      &::before {
+        background-position-y: -206px;
+      }
+    }
+
+    &.title-4 {
+      &::before {
+        background-position-y: -314px;
+      }
+    }
+
+    &.title-5 {
+      &::before {
+        background-position-y: -420px;
+      }
+    }
+
+    &.title-6 {
+      &::before {
+        background-position-y: -516px;
+      }
+    }
+
+    &.title-7 {
+      &::before {
+        background-position-y: -622px;
+      }
+    }
+
+    &.title-8 {
+      &::before {
+        background-position-y: -733px;
+      }
+    }
+
+    &.title-9 {
+      &::before {
+        background-position-y: -839px;
+      }
+    }
+
+    &.title-10 {
+      &::before {
+        background-position-y: -947px;
+      }
+    }
+
+    &.title-11 {
+      &::before {
+        background-position-y: -1067px;
+      }
+    }
+
+    &.title-12 {
+      &::before {
+        background-position-y: -1178px;
+      }
+    }
+
+    &.title-13 {
+      &::before {
+        background-position-y: -1292px;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  #transparency-lvl3-buttons {
+    padding: 15px 5px;
+    font-size: 0.8em;
+
+    .btn-tranparency {
+      padding: 5px;
+
+      &::before {
+        content: "";
+        padding: 0 5px;
+      }
+    }
+  }
+}

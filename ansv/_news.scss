@@ -1,0 +1,171 @@
+#news{
+    background: url(../images/bg-news.png) bottom right no-repeat;
+    h1{
+        color: $blue-dark;
+        font-size: 2em;
+    }
+    h2.news-header{
+        background: $blue-dark;
+        color: $white;
+        padding: 10px 12% 8px;
+        text-align: left;
+        font-size: 1.3em;
+        margin-bottom: 0;
+        -webkit-border-top-left-radius: 12px;
+        -webkit-border-top-right-radius: 12px;
+        -moz-border-radius-topleft: 12px;
+        -moz-border-radius-topright: 12px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        white-space: nowrap;
+    }
+    h3{
+        color: $blue-dark;
+        font-family: 'FuturaPTBold', sans-serif;
+        font-size: 1.4em;
+        margin-bottom: 0px;
+    }
+    .contentainer-latest-new{
+        background-color: $white;
+        border: 1px solid $gray-light;
+        padding: 20px;
+        -webkit-border-radius: 10px;
+        -webkit-border-top-left-radius: 0;
+        -moz-border-radius: 10px;
+        -moz-border-radius-topleft: 0;
+        border-radius: 10px;
+        border-top-left-radius: 0;
+        @include box-shadow-general;
+        margin-bottom: 30px;
+        .latest-new-date{
+            color: $blue-light;
+            font-family: 'FuturaPTBold', sans-serif;
+            font-size: 0.8em;
+            margin-bottom: 8px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        .caption-image{
+            margin-top: -28px;
+            color: $white;
+            background: rgba($color: #000000, $alpha: 0.8);
+            display: block;
+            position: relative;
+            width: 100%;
+            padding: 2px 11px;
+            margin-bottom: 20px;
+            .caption-desc{
+                font-size: 0.7em;
+            }
+            .caption-autor{
+                font-size: 0.6em;
+                font-variant: small-caps;
+            }
+        }
+        .latest-new-body{
+            font-size: 0.9em;
+            color: $gray-dark;
+        }
+        
+       
+    }
+    .news-list h2{
+        background: $blue-dark;
+        color: $white;
+        padding: 10px 4px 8px;
+        text-align: center;
+        font-size: 1.3em;
+        margin-bottom: 0;
+        -webkit-border-top-left-radius: 12px;
+        -webkit-border-top-right-radius: 12px;
+        -moz-border-radius-topleft: 12px;
+        -moz-border-radius-topright: 12px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;            
+    }
+    .recent-news-container{
+        border: 1px solid $gray-light;
+        -webkit-border-bottom-right-radius: 12px;
+        -webkit-border-bottom-left-radius: 12px;
+        -moz-border-radius-bottomright: 12px;
+        -moz-border-radius-bottomleft: 12px;
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 12px;
+        @include box-shadow-general;
+        .recent-new-date{
+            color: $blue-light;
+            font-family: 'FuturaPTBold', sans-serif;
+            font-size: 0.8em;
+            margin-bottom: -16px;
+            position: relative;
+            background: rgba($color: #000000, $alpha: 0.8);
+            display: block;
+            padding: 5px 10px;
+        }
+        .internal-cont-news{
+            padding: 20px;
+            height: 587px;
+            overflow-y: scroll;
+            background-color: $white;
+        }
+        p{
+            font-size: 0.9em;
+            color: #333333;
+        }
+        .recent-new-title{
+            color: #071D49;
+            font-family: "FuturaPTBold", sans-serif;
+            font-size: 1.4em;
+            margin-bottom: 0px;
+        }
+    }
+    #social {
+        border: 1px solid $gray-light;
+        background-color: $white;
+        padding: 20px 5px;
+        @include border-radius(12px);
+        @include box-shadow-general;
+        ul.nav-pills{
+            margin: auto;
+        }
+        .fb-page{
+            width: 100% !important;
+            display: block;
+        }
+        .nav-pills .nav-link{
+            text-align: center;
+            width: 44px;
+            height: 44px;
+            line-height: 26px;
+            color: $white;
+            background-color: $gray-light;
+            margin: 2px 4px;
+            @include border-radius(50%);
+            &:hover{
+                background-color: $gray-dark;
+                @include transition-light;
+            }
+        }
+        .nav-pills .nav-link.active{
+            background-color: $blue-light;
+            color: $white;
+        }
+        .tab-pane{
+            min-height: 550px;
+            max-height: 580px;
+        }
+        #pills-twitter{
+            max-height: 580px;
+            overflow-y: scroll;  
+        }
+        #pills-instagram{
+            iframe{
+                min-width: 240px!important;
+                padding: 0;
+            } 
+        }
+    }
+    
+}

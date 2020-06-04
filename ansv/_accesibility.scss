@@ -1,0 +1,56 @@
+/*-------------Accesibility------------*/
+.accesibility-buttons{
+    right: 0;
+    position: fixed;
+    top:50%;
+    transform: translateY(-50%);
+    padding: 12px 12px;
+    background: $blue-dark;
+    margin: 0;
+    -webkit-border-radius: 8px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius: 8px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-radius: 8px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 10;
+    @include box-shadow-general;
+    ul{
+        list-style: none;
+        padding: 0px;
+        margin: 0;
+        li{
+            list-style-type:none;
+            background: $white;
+            margin: 10px auto;
+            width: 40px;
+            height: 40px;
+            @include border-radius-light;
+            background: url(../images/sprite-accesibility.png) no-repeat;
+            background-color: $white;
+            @include transition-light;
+            &:hover{
+                background-color: $blue-light;
+                cursor: pointer;
+            }
+        }
+        li.ctr-contrast{
+            background-position: -8px -7px
+        }
+        li.ctr-plus{
+            background-position: -6px -121px;
+        }
+        li.ctr-normal{
+            background-position: -8px -83px;
+        }
+        li.ctr-less{
+            background-position: -6px -43px;
+        }
+        li.ctr-sign{
+            background-position: -8px -159px;
+        }
+    }
+}

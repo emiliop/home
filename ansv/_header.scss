@@ -1,0 +1,36 @@
+.header-gov{
+    background-color:$blue-gov;
+    padding: 4px 0px 6px;
+    margin-bottom: 60px;
+    img{margin: 0 4px;}
+}
+.btn-lang{
+    float: right;
+    background-color: $white;
+    color:$blue-gov;
+    font-size: 0.7rem;
+    padding: .2rem .4rem;
+    margin-right: 4px;
+    @include border-radius-light;
+    &:hover{
+        color:$white;
+        background-color: $blue-gov;
+    }
+}
+.header-institution {
+    margin-bottom: 60px;
+}
+.logo-ansv {
+    float: left;
+    height: auto;
+    width: 50%;
+    max-width: 222px;
+}
+.logo-min {
+    float: right;
+    height: auto;
+    width: 50%;
+    max-width: 232px;
+    margin: 15px 0 0;
+}
+

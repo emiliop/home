@@ -1,0 +1,20 @@
+#videos{
+    background: url(../images/bg-videos.png) no-repeat left;
+    background-color: $blue-dark;
+    padding: 60px 0;
+    h2{
+        color: $white;
+        font-family: 'FuturaPTMedium', sans-serif;
+    }
+    h4{
+        color: $blue-light;
+    }
+    p{
+        color: $white;
+        font-family: 'Montserrat-Light';
+        font-size: 0.9em;
+        span.video-date{
+            font-family: 'FuturaPTBold', sans-serif;
+        }
+    }
+}

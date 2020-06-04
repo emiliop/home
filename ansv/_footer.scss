@@ -1,0 +1,66 @@
+#footer-agencia {
+  background: $white;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+
+#footer-agencia ul {
+  li {
+    color: $blue-light;
+
+    a {
+      font-family: 'FuturaPTMedium', sans-serif;
+      font-size: 0.9em;
+    }
+  }
+}
+
+#footer-gov {
+  background: $blue-gov;
+  color: $white;
+  font-family: 'Montserrat-Light', sans-serif;
+  font-size: 0.7em;
+  padding: 60px 0;
+
+  .social-list {
+    li {
+      width: 32px;
+      height: 32px;
+      background: rgba(255, 255, 255, 0.3);
+      display: inline-block;
+      vertical-align: middle;
+      margin: 2px 2px 2px 0;
+      text-align: center;
+
+      a {
+        @include transition-light;
+        color: rgba($color: #ffffff, $alpha: 1.0);
+        vertical-align: middle;
+        text-decoration: none;
+        line-height: 2.5em;
+        font-size: 1.2em;
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+          color: rgba($color: $blue-gov, $alpha: 1.0);
+          background: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+
+  h6 {
+    font-size: 0.9em;
+    font-family: 'Montserrat-Regular', sans-serif;
+  }
+}
+
+#footer-gov a {
+  color: rgba($color: #ffffff, $alpha: 1.0);
+}
+
+#footer-gov img#govco {
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,43 @@
+#secondary-menu{
+    margin-top: -80px;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 20px;
+    .container{
+        border: 1px solid $gray-light;
+        background-color: $white;
+        @include border-radius(20px);
+        @include box-shadow-general;
+    }
+    img{
+        display: block;
+        margin: auto;
+    }
+    h5,h6{
+        font-family: 'FuturaPTMedium', sans-serif;
+        text-align: center;
+        color: $blue-dark;
+    }
+    hr{
+        margin: 0px auto 5px;
+        width: 50%;
+        border: solid 1px $blue-dark;
+    }
+    a{
+        text-decoration: none;
+        margin: 8px 0;
+        padding: 3px;
+        display: block;
+        @include border-radius(10px);
+        @include transition-light;
+        &:hover{
+            background: $gray-ultralight;
+            @include box-shadow-general;
+            /*h5, h6{
+                //color: $gray-light;
+            }<-- cuando se defina otro color ver el negativo*/
+            
+        }
+    }
+
+}

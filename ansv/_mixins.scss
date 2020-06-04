@@ -1,0 +1,66 @@
+
+/*-----------------Mixins-------------*/
+@mixin background-gradient-properties($color1, $color2) {
+    background: $color1;
+    background: -moz-linear-gradient(left, $color1 0%, $color2 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, $color1), color-stop(100%, $color2));
+    background: -webkit-linear-gradient(left, $color1 0%, $color2 100%);
+    background: -o-linear-gradient(left, $color1 0%, $color2 100%);
+    background: -ms-linear-gradient(left, $color1 0%, $color2 100%);
+    background: linear-gradient(to right, $color1 0%, $color2 100%);
+}
+@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin border-radius-light{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+@mixin box-shadow-general{
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.3);
+}
+@mixin transition-light {
+    -webkit-transition: all 0.3s 0s ease;
+    -moz-transition: all 0.3s 0s ease;
+    -o-transition: all 0.3s 0s ease;
+    transition: all 0.3s 0s ease;
+}
+// @mixin para centrar x o y o los dos
+@mixin align-center ($axis: "both"){
+    position:absolute;
+    @if $axis == "y"{
+        top:50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    @if $axis == "x"{
+        left:50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    @if $axis == "both"{
+        top:50%;
+        left:50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }   
+}
+/* Modo de uso
+Y axis : @include align-center(y);
+X axis : @include align-center(x);
+Both axis : @include align-center;
+*/

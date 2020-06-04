@@ -1,0 +1,170 @@
+.main-menu .navbar {
+  border: 1px solid $gray-light;
+  background-color: $white!important;
+  font-family: 'Montserrat-Regular', sans-serif;
+  font-weight: 300;
+  font-size: 0.8em;
+  padding: 13px 40px;
+  @include border-radius(20px);
+  @include box-shadow-general;
+
+  .icon-home {
+    background: url("../images/icon-home.png") no-repeat;
+    background-position: 14px 0;
+    display: block;
+    padding-left: 30px!important;
+  }
+}
+
+.main-menu .navbar-light .navbar-nav .active > .nav-link,
+.main-menu .navbar-light .navbar-nav .nav-link {
+  color: $blue-dark;
+}
+
+.main-menu .nav-item.active {
+  font-weight: 300;
+}
+
+.main-menu .dropdown-toggle::after {
+  display: none;
+}
+
+.main-menu ul.navbar-nav.nav-fill {
+  width: 100%;
+}
+
+.main-menu li.nav-item,
+.main-menu li.nav-item.active {
+  border-right: 1px solid $blue-dark;
+  /*border-image: linear-gradient(to bottom, rgba(7,29,73,0) 25%,rgba(7,29,73,1) 25%,rgba(7,29,73,1) 75%,rgba(7,29,73,0) 75%); verificar para linea que divide el texto*/
+  line-height: 0.7em;
+  @include transition-light;
+
+  a {
+    padding: 8px 4px;
+    white-space: normal;
+    line-height: 1em;
+    @include border-radius-light;
+    &:hover{
+      background: $blue-dark;
+    }
+  }
+
+  &:hover {
+    a,
+    a:hover {
+      color: $white;
+    }
+
+    .icon-home {
+      background: url("../images/icon-home-w.png") no-repeat;
+      background-position: 14px 2px;
+      background-color: $blue-dark;
+    }
+  }
+}
+/*.main-menu li.nav-item.active a{
+  
+}*/
+
+.main-menu li.nav-item:last-child {
+  border-right: 0;
+}
+.main-menu .dropdown-menu.show{
+background-color: $blue-light;
+font-size: 0.9em;
+padding: 10px;
+color: $white;
+  a{
+    color: $white;
+  }
+  .dropdown-item{
+    //padding: 4px 2px;
+    @include transition-light;
+    &:hover{
+      background-color: $blue-dark;
+    }
+  }
+  a#navbarDropdownMenuLink{
+    background-color: $blue-light;
+    color: $white;
+  }
+}
+
+.navigation-alternatives {
+  background: $blue-dark;
+  padding: 32px 0 0;
+  margin-top: -15px;
+
+  .breadcrumb {
+    justify-content: center;
+    background-color: rgba(0,0,0,0);
+    color: $blue-light;
+    font-size: 0.8em;
+
+    .breadcrumb-item {
+      justify-content: center;
+      align-items: center;
+      font-family: 'Montserrat-SemiBold';
+
+      &+.breadcrumb-item {
+        &::before {
+          color: $blue-light;
+          content: '❯';
+        }
+      }
+
+      &:last-child {
+        display: flex;
+        font-family: 'Montserrat-Black';
+      }
+
+      &,
+      a,
+      span {
+        color: $blue-light;
+      }
+    }
+  }
+
+  .search-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .search-bar {
+    width: 65%;
+    float: right;
+    margin-right: 10px;
+
+    .form-control {
+      border: none;
+      font-family: 'Montserrat-Regular', sans-serif;
+      font-weight: 300;
+      font-size: 0.85em;
+      @include border-radius(20px);
+    }
+
+    .input-group-append {
+      margin-left: -32px;
+      z-index: 1;
+
+      span {
+        @include border-radius(50%);
+        width: 30px;
+        height: 30px;
+        margin: 2px 0 0;
+        cursor: pointer;
+        background: url("../images/icon-search.png") $blue-dark no-repeat;
+        background-position: 49% 49%;
+
+        &:hover {
+          background-color: $blue-light;
+          @include transition-light;
+        }
+      }
+    }
+  }
+}

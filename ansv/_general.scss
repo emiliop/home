@@ -1,0 +1,345 @@
+/*-------------General------------*/
+body {
+  font-family: 'Montserrat-Regular', sans-serif;
+}
+
+h1 {
+  font-family: 'FuturaPTHeavy', sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'FuturaPTMedium', sans-serif;
+}
+
+.btn-outline-primary {
+  border: 1px solid $gray-light;
+  font-family: 'FuturaPTBold', sans-serif;
+  color: $blue-dark;
+  padding: 8px 20px;
+  @include border-radius(25px);
+  margin-bottom: 20px;
+
+  &:hover {
+    background-color: $blue-light !important;
+  }
+}
+
+.btn {
+  &.transparency-button-document,
+  &.transparency-button-link {
+    border: 2px solid $blue-light;
+    font-family: 'Montserrat-Regular';
+    color: $blue-light;
+    border-radius: 10px;
+    position: relative;
+    padding: 3px 45px 3px 15px;
+    margin: 10px 0 !important;
+    font-size: 0.9em;
+    @include box-shadow-general;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      right: 0;
+      height: 100%;
+      top: 0;
+      border-radius: 8px;
+    }
+
+    &:hover {
+      border: 2px solid $white;
+      color: $white;
+    }
+  }
+
+  &.transparency-button-link {
+    &:before {
+      background: $blue-light url("../images/img_btn_link_white.png") no-repeat center center /70% auto;
+    }
+
+    &:hover {
+      &:before {
+        background: $white url("../images/img_btn_link.png") no-repeat center center /70% auto;
+      }
+    }
+  }
+
+  &.transparency-button-document {
+    &:before {
+      background: $blue-light url("../images/img_btn_download_white.png") no-repeat center center /75% auto;
+    }
+
+    &:hover {
+      &:before {
+        background: $white url("../images/img_btn_download.png") no-repeat center center /75% auto;
+      }
+    }
+  }
+
+  &.btn-blue-light {
+    color: $blue-dark;
+    background: $blue-light !important;
+    font-family: 'Montserrat-Bold';
+    border-radius: 100px;
+    padding: 5px 20px;
+    border: none;
+    font-size: 0.8em;
+    @include box-shadow-general;
+
+    &:hover {
+      background: $blue-dark !important;
+      color: $blue-light !important;
+    }
+  }
+}
+
+.badge-news {
+  border: solid 1px $gray-light;
+  font-family: 'FuturaPTBold', sans-serif;
+  font-size: 0.7em;
+  color: $gray-dark;
+  margin-bottom: 16px;
+
+  &:hover {
+    color: $white;
+    background-color: $gray-dark;
+  }
+}
+
+.btn-see-all {
+  font-family: 'FuturaPTBold', sans-serif;
+  text-align: center;
+}
+
+.bg-blue-semilight {
+  background-color: $blue-semilight !important;
+}
+
+.bg-gray-semilight {
+  background-color: $gray-semilight !important;
+}
+
+hr.gray-semilight {
+  border-top: 1px solid $gray-semilight;
+}
+
+.paginator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  font-family: "WorkSans-Bold";
+
+  .paginator-element {
+    color: $gray-semidark;
+    font-size: 1.2em;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  .prensa-paginator-active {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $gray-semilight;
+    border: 2px solid $gray-semidark;
+    color: $blue-dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-next,
+  .btn-prev {
+    color: $blue-dark;
+  }
+}
+
+#accordion {
+  .card {
+    margin-bottom: 20px;
+    @include border-radius(0);
+  }
+
+  .card-header {
+    background-color: $purple-ultralight;
+    transition: 0.3s all;
+    @include border-radius(0);
+    cursor: pointer;
+
+    .title {
+      color: $blue-dark;
+      font-family: 'FuturaPTHeavy';
+      font-size: 1.1em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .arrow {
+      min-width: 30px;
+      height: 30px;
+      background-image: url("../images/img_accordion_arrows.png");
+      margin-left: 15px;
+      background-position-x: -10px;
+      background-position-y: -12px;
+    }
+
+    &[aria-expanded="true"] {
+      background-color: $gray-semidark;
+
+      .title {
+        color: $white;
+      }
+
+      .arrow {
+        background-position-x: -55px;
+      }
+    }
+  }
+
+  .card-body {
+    .transparency-singular-element {
+      font-size: 0.9em;
+    }
+
+    .btn-outline-primary {
+      margin: 0;
+    }
+  }
+}
+
+%type-media {
+  .event-icon {
+    height: 95px;
+    min-width: 95px;
+    position: absolute;
+    bottom: -12px;
+    left: -12px;
+    background-image: url("../images/img_event_types.png");
+    background-position-x: -18px;
+    transform: scale(0.75);
+  }
+
+  &.type-person {
+    .event-icon {
+      background-position-y: -264px;
+    }
+  }
+
+  &.type-bike {
+    .event-icon {
+      background-position-y: -135px;
+    }
+  }
+
+  &.type-bus {
+    .event-icon {
+      background-position-y: -402px;
+    }
+  }
+
+  &.type-car {
+    .event-icon {
+      background-position-y: -6px;
+    }
+  }
+}
+
+.video-item {
+  position: relative;
+
+  &:hover {
+    text-decoration: none;
+
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &:after {
+    transition: 0.3s opacity;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    content: "";
+    opacity: 0;
+    background-color: rgba($white,0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .video-img-container {
+    background-color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    @extend %type-media;
+  }
+
+  .video-content {
+    background-color: $white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .video-date {
+      font-family: 'WorkSans-Bold';
+      font-size: 0.8em;
+      color: $blue-dark;
+    }
+
+    .video-city {
+      font-family: 'WorkSans-Regular';
+      font-size: 0.8em;
+      color: $blue-light;
+      text-align: right;
+    }
+
+    .video-title {
+      margin: 10px 0;
+      font-family: 'FuturaStd-Bold';
+      font-size: 1.1em;
+      line-height: 1.2;
+      color: $blue-dark;
+    }
+
+    .video-description {
+      font-family: 'WorkSans-Regular';
+      font-size: 0.9em;
+      line-height: 1.2;
+      color: $gray-semidark;
+    }
+  }
+}
+
+.more-videos {
+  font-family: "Montserrat-Bold";
+  color: $blue-light;
+  padding: 10px 5px;
+  border-radius: 10px;
+
+  &:hover {
+    color: $blue-light;
+    background-color: rgba($white, 0.15);
+    text-decoration: none;
+  }
+}
