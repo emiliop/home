@@ -50,10 +50,10 @@
     <div class="row header-institution">
       <div class="container">
         <a class="logo-ansv" href="./index.html">
-          <img src="/themes/contrib/bootstrap_sass/images/logoAnsv.png" alt="Agencia Nacional de Seguridad Vial">
+          <img width="100%" src="/themes/contrib/bootstrap_sass/images/logoAnsv.png" alt="Agencia Nacional de Seguridad Vial">
         </a>
         <a class="logo-min" href="http://www.mintransporte.gov.co" target="_blank">
-          <img src="/themes/contrib/bootstrap_sass/images/logoMin.jpg" alt="Ministerio de trasporte">
+          <img width="100%" src="/themes/contrib/bootstrap_sass/images/logoMin.jpg" alt="Ministerio de trasporte">
         </a>
       </div>
     </div>
@@ -81,7 +81,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav nav-fill">
           <li class="nav-item active">
-            <a class="nav-link icon-home" href="./index.html">INICIO</a>
+            <a class="nav-link icon-home" href="/home">INICIO</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -121,7 +121,7 @@
             <a class="nav-link" href="#">Normativa</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="./transparencia.html">Transparencia</span></a>
+            <a class="nav-link" href="/transparencia">Transparencia</span></a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -140,7 +140,7 @@
             </div>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="./prensa.html">Prensa</a>
+            <a class="nav-link" href="/prensa">Prensa</a>
           </li>
         </ul>
       </div>
@@ -178,6 +178,12 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        {% if url4 %}
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        {% endif %}
+        {% if url5 %}
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        {% endif %}
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -185,7 +191,7 @@
           <div class="carousel-caption">
             <h3>{{ title1 }}</h3>
             <p><small>{{ body1 }}</small></p>
-            <button type="button" class="btn btn-light btn-sm">Ampliar Información</button>
+            <button type="button" class="btn btn-light btn-sm" onclick="window.location.href='{{ link1 }}';">Ampliar Información</button>
           </div>
         </div>
         <div class="carousel-item">
@@ -193,17 +199,41 @@
           <div class="carousel-caption">
             <h3>{{ title2 }}</h3>
             <p><small>{{ body2 }}</small></p>
-            <button type="button" class="btn btn-light btn-sm">Ampliar Información</button>
+            <button type="button" class="btn btn-light btn-sm" onclick="window.location.href='{{ link2 }}';">Ampliar Información</button>
           </div>
         </div>
+
         <div class="carousel-item">
           <img class="d-block" src="{{ file_url(url3) }}" alt="Slide Dummy 3">
           <div class="carousel-caption">
             <h3>{{ title3 }}</h3>
             <p><small>{{ body3 }}</small></p>
-            <button type="button" class="btn btn-light btn-sm">Ampliar Información</button>
+            <button type="button" class="btn btn-light btn-sm" onclick="window.location.href='{{ link3 }}';">Ampliar Información</button>
           </div>
         </div>
+
+        {% if url4 %}
+          <div class="carousel-item">
+          <img class="d-block" src="{{ file_url(url4) }}" alt="Slide Dummy 3">
+          <div class="carousel-caption">
+            <h3>{{ title4 }}</h3>
+            <p><small>{{ body4 }}</small></p>
+            <button type="button" class="btn btn-light btn-sm" onclick="window.location.href='{{ link4 }}';">Ampliar Información</button>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if url5 %}
+          <div class="carousel-item">
+          <img class="d-block" src="{{ file_url(url5) }}" alt="Slide Dummy 3">
+          <div class="carousel-caption">
+            <h3>{{ title5 }}</h3>
+            <p><small>{{ body5 }}</small></p>
+            <button type="button" class="btn btn-light btn-sm" onclick="window.location.href='{{ link5 }}';">Ampliar Información</button>
+          </div>
+        </div>
+        {% endif %}
+        
       </div>
       <div class="carousel-controls">
         <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
@@ -226,42 +256,42 @@
     <div class="row">
       <div class="container">
         <div class="row">
-          <div class="col-2">
+          <div class="col-md-2 col-sm-4">
             <a class="link" href="#">
               <img src="/themes/contrib/bootstrap_sass/images/icon-observatorio.png" alt="icono de observatorio">
               <hr>
               <h6>Observatorio Nacional de Seguridad Vial</h6>
             </a>
           </div>
-          <div class="col-2">
+          <div class="col-md-2 col-sm-4">
             <a class="link" href="#">
               <img src="/themes/contrib/bootstrap_sass/images/icon-victimas.png" alt="icono atención a Victimas">
               <hr>
               <h6>Atención a Victimas de Siniestros Viales</h6>
             </a>
           </div>
-          <div class="col-2">
+          <div class="col-md-2 col-sm-4">
             <a class="link" href="#">
               <img src="/themes/contrib/bootstrap_sass/images/icon-movilidad.png" alt="icono planes de movilidad">
               <hr>
               <h6>Planes de Movilidad Escolar</h6>
             </a>
           </div>
-          <div class="col-2">
+          <div class="col-md-2 col-sm-4">
             <a class="link" href="#">
               <img src="/themes/contrib/bootstrap_sass/images//icon-ninos.png" alt="icono de niños y niñas">
               <hr>
               <h6>Recursos para Niños, Niñas y Adolecentes</h6>
             </a>
           </div>
-          <div class="col-2">
+          <div class="col-md-2 col-sm-4">
             <a class="link" href="#">
               <img src="/themes/contrib/bootstrap_sass/images/icon-motos.png" alt="icono de motociclistas">
               <hr>
               <h6>Recursos para Motociclistas</h6>
             </a>
           </div>
-          <div class="col-2">
+          <div class="col-md-2 col-sm-4">
             <a class="link" href="#">
               <img src="/themes/contrib/bootstrap_sass/images/icon-sindicato.png" alt="icono de Sindicato">
               <hr>
@@ -288,7 +318,7 @@
         <div class="col-md-12">
           <h1>Noticias</h1>
         </div>
-        <div class="col-md-6 main-new">
+        <div class="col-sm-12 col-md-12 col-lg-6 main-new">
           <div class="d-flex">
             <h2 class="news-header">Última noticia</h2>
           </div>
@@ -313,7 +343,7 @@
           </div>
         </div>
 
-        <div class="col-md-3 news-list">
+        <div class="col-sm-12 col-md-6 col-lg-3 news-list">
           <h2>Noticias recientes</h2>
           <div class="recent-news-container">
             <div class="internal-cont-news">
@@ -354,7 +384,7 @@
 
         </div>
 
-        <div class="col-md-3">
+        <div class="col-sm-12 col-md-6 col-lg-3">
           <div class="row">
             <div class="col-md-12">
               <div id="social">
@@ -522,7 +552,7 @@
         <div class="col-md-12">
           <h2>Eventos y calendario</h2>
         </div>
-        <div class="col-md-4 col-sm-12 ">
+        {# <div class="col-md-4 col-sm-12 ">
           <div class="d-flex">
             <h2 class="event-header">Evento destacado</h2>
           </div>
@@ -537,8 +567,8 @@
             </div>
             <button type="button" class="btn btn-outline-primary">Consultar evento</button>
           </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
+        </div> #}
+        <div class="col-md-6 col-sm-12">
           <div class="d-flex">
             <h2 class="event-header">Proximos eventos</h2>
           </div>
@@ -562,6 +592,10 @@
                   <hr>
                   <li><span>11/05/2020</span><br>Sed malesuada dolor et mi mollis blandit. Quisque nisl velit, sagittis in accumsan venenatis, faucibus eu nunc. Suspendisse consequat eget neque a auctor.</li>
                   <hr>
+                  <li><span>11/05/2020</span><br>Sed malesuada dolor et mi mollis blandit. Quisque nisl velit, sagittis in accumsan venenatis, faucibus eu nunc. Suspendisse consequat eget neque a auctor.</li>
+                  <hr>
+                  <li><span>11/05/2020</span><br>Sed malesuada dolor et mi mollis blandit. Quisque nisl velit, sagittis in accumsan venenatis, faucibus eu nunc. Suspendisse consequat eget neque a auctor.</li>
+                  <hr>
                 </ul>
               </div>
               <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
@@ -571,7 +605,7 @@
           </div>
 
         </div>
-        <div class="col-md-4 col-sm-12 calendar">
+        <div class="col-md-6 col-sm-12 calendar">
           <div class="d-flex">
             <h2 class="event-header">Calendario</h2>
           </div>
@@ -617,30 +651,30 @@
       <div class="row">
         <div class="col-3">
           <div class="row">
-            <div class="col-6">
+            <div class="col-4">
               <img class="img-responsive " src="https://www.mintransporte.gov.co/info/mintransporte/media/bloque2387.png" id="govco" alt="icono colombia oficial">
             </div>
-            <div class="col-6">
+            <div class="col-7 ">
               <ul class="list-unstyled social-list">
                 <li>
-                  <a class="section fa fa-facebook-f enl-fb" target="_blank" href="https://www.facebook.com/MintransporteColombiaoficial" title="Enlace a Facebook"></a>
+                  <a class="section fa fa-facebook-f enl-fb" target="_blank" href="https://www.facebook.com/agencianacionaldeseguridadvial/?fref=ts" title="Enlace a Facebook"></a>
                 </li>
                 <li>
-                  <a class="section fa fa-twitter enl-tw" target="_blank" href="https://twitter.com/MinTransporteCo" title="Enlace a Twitter"></a>
+                  <a class="section fa fa-twitter enl-tw" target="_blank" href="https://twitter.com/ansvcol" title="Enlace a Twitter"></a>
                 </li>
                 <li>
-                  <a class="section fa fa-youtube enl-yt" target="_blank" href="https://www.youtube.com/user/Mintransporte" title="Enlace a Youtube"></a></li>
+                  <a class="section fa fa-youtube enl-yt" target="_blank" href="https://www.youtube.com/channel/UCynojn_g9TbcdPR6w1FMBDA" title="Enlace a Youtube"></a></li>
                 <li>
-                  <a class="section fa fa-instagram enl-in" target="_blank" href="https://www.instagram.com/mintransporteco/" title="Enlace a Instagram"></a>
+                  <a class="section fa fa-instagram enl-in" target="_blank" href="https://www.instagram.com/ansvcolombia/" title="Enlace a Instagram"></a>
                 </li>
                 <li>
-                  <a class="section fa fa-flickr enl-fl" target="_blank" href="https://www.flickr.com/photos/mintransporteco/" title="Enlace a Flickr"></a>
+                  <a class="section fa fa-flickr enl-fl" target="_blank" href="https://www.flickr.com/photos/141231580@N06" title="Enlace a Flickr"></a>
                 </li>
-                <li>
+                <!--<li>
                   <a class="section fa fa-calendar-o" href="https://www.mintransporte.gov.co/calendario" title="Enlace a Agenda"></a>
-                </li>
+                </li>-->
                 <li>
-                  <a class="section fa fa-weixin" target="_blank" href="http://bit.ly/2UC8kag" title="Enlace a Chat"></a>
+                  <a class="section fa fa-weixin" target="_blank" href="http://correo.ansv.gov.co/" title="Contacto correo"></a>
                 </li>
               </ul>
             </div>
@@ -655,7 +689,7 @@
         <div class="col-2 text-center text-md-left">
           <p>Código Postal 111321</p>
           <h6>Teléfono conmutador</h6>
-          <p>(+57 1) 7399080 op. 1 <br>(+57 1) 3240800 op. 2</p>
+          <p>(+57 1) 7399080 <br>(+57 1) 3240800 op. 2</p>
         </div>
 
         <div class="col-3 no-padding text-center text-md-left">
@@ -691,8 +725,6 @@
           <h6>Recepción de Correspondencia</h6>
 
           <p>Lunes a viernes<br>de 8:00 a.m. - 4:00 p.m. <br>Jornada Continua</p>
-
-          <p><a href="https://www.mintransporte.gov.co/publicaciones/357/directorios_ministerio_de_transporte/" target="_blank">Sedes Territoriales y Fluviales</a></p>
         </div>
       </div>
     </div>
