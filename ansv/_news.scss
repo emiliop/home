@@ -93,6 +93,7 @@
         -moz-border-radius-bottomleft: 12px;
         border-bottom-right-radius: 12px;
         border-bottom-left-radius: 12px;
+        margin-bottom: 40px;
         @include box-shadow-general;
         .recent-new-date{
             color: $blue-light;
@@ -125,6 +126,7 @@
         border: 1px solid $gray-light;
         background-color: $white;
         padding: 20px 5px;
+        margin-bottom: 40px;
         @include border-radius(12px);
         @include box-shadow-general;
         ul.nav-pills{

@@ -4,7 +4,7 @@
     position: fixed;
     top:50%;
     transform: translateY(-50%);
-    padding: 12px 12px;
+    padding: 2px 8px;
     background: $blue-dark;
     margin: 0;
     -webkit-border-radius: 8px;
@@ -16,7 +16,7 @@
     border-radius: 8px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    z-index: 10;
+    z-index: 20;
     @include box-shadow-general;
     ul{
         list-style: none;
@@ -26,8 +26,8 @@
             list-style-type:none;
             background: $white;
             margin: 10px auto;
-            width: 40px;
-            height: 40px;
+            width: 34px;
+            height: 34px;
             @include border-radius-light;
             background: url(../images/sprite-accesibility.png) no-repeat;
             background-color: $white;
@@ -38,19 +38,19 @@
             }
         }
         li.ctr-contrast{
-            background-position: -8px -7px
+            background-position: -3px -2px;
         }
         li.ctr-plus{
-            background-position: -6px -121px;
+            background-position: -1px -114px;
         }
         li.ctr-normal{
-            background-position: -8px -83px;
+            background-position: -3px -78px;
         }
         li.ctr-less{
-            background-position: -6px -43px;
+            background-position: -1px -42px;
         }
         li.ctr-sign{
-            background-position: -8px -159px;
+            background-position: -3px -151px;
         }
     }
 }

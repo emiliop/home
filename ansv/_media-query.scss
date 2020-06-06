@@ -34,7 +34,7 @@
     .breadcrumb {
       justify-content: flex-start;
     }
-
+}
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {
     .carousel-caption p{
@@ -61,21 +61,28 @@
         width: 80vw;
     }
     
-}
-  .main-menu .navbar {
-    padding: 13px 4px;
-  }
+    .main-menu .navbar {
+        padding: 13px 4px;
+    }
 
-  .main-menu li.nav-item,
-  .main-menu li.nav-item.active {
-    padding: 0;
-  }
+    .main-menu li.nav-item,
+    .main-menu li.nav-item.active {
+        padding: 0;
+    }
+    #event .contentainer-upcoming-event .tab-content{
+        max-height: 352px;
+    }
+    
+ 
 }
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
     .carousel-controls{
         max-width: 1140px;
         //width: 80vw;
+    }
+    #event .contentainer-upcoming-event .tab-content{
+        max-height: 420px;
     }
     
 }

@@ -10,7 +10,7 @@
 
   .icon-home {
     background: url("../images/icon-home.png") no-repeat;
-    background-position: 14px 0;
+    background-position: 8px 1px;
     display: block;
     padding-left: 30px!important;
   }
@@ -58,14 +58,11 @@
 
     .icon-home {
       background: url("../images/icon-home-w.png") no-repeat;
-      background-position: 14px 2px;
+      background-position: 8px 4px;
       background-color: $blue-dark;
     }
   }
 }
-/*.main-menu li.nav-item.active a{
-  
-}*/
 
 .main-menu li.nav-item:last-child {
   border-right: 0;
