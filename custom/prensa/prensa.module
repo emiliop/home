@@ -1,0 +1,18 @@
+<?php 
+
+function prensa_theme() {
+     
+     return [
+      'prensa' => [
+        'template' => 'prensa',
+        'variables' => ['test_var' => NULL,
+                        'name' => NULL,
+                        'title' => NULL,
+                        'url' => NULL,
+                        'nombre' => NULL
+                      ],
+      ],
+      
+    ];
+ 
+}

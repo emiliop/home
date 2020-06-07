@@ -1,0 +1,18 @@
+<?php 
+
+function normativa_theme() {
+     
+     return [
+      'normativa' => [
+        'template' => 'normativa',
+        'variables' => ['test_var' => NULL,
+                        'name' => NULL,
+                        'title' => NULL,
+                        'url' => NULL,
+                        'nombre' => NULL
+                      ],
+      ],
+      
+    ];
+ 
+}

@@ -1,0 +1,6 @@
+name: ANSV seccion normativa Module
+description: Creates a page showing the ANSV normativa webpage.
+package: Custom
+
+type: module
+core: 8.x

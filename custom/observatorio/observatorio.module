@@ -1,0 +1,18 @@
+<?php 
+
+function observatorio_theme() {
+     
+     return [
+      'observatorio' => [
+        'template' => 'observatorio',
+        'variables' => ['test_var' => NULL,
+                        'name' => NULL,
+                        'title' => NULL,
+                        'url' => NULL,
+                        'nombre' => NULL
+                      ],
+      ],
+      
+    ];
+ 
+}

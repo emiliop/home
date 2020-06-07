@@ -1,0 +1,6 @@
+name: ANSV seccion prensa Module
+description: Creates a page showing the ANSV prensa webpage.
+package: Custom
+
+type: module
+core: 8.x

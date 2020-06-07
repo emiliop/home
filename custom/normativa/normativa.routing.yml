@@ -1,0 +1,8 @@
+normativa.normativa:
+  path: '/normativa'
+  defaults:
+    _controller: '\Drupal\normativa\Controller\NormativaController::normativa'
+    _title: 'Normativa'
+  requirements:
+    _permission: 'access content'
+

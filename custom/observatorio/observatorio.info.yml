@@ -1,0 +1,6 @@
+name: ANSV seccion observatorio Module
+description: Creates a page showing the ANSV observatorio webpage.
+package: Custom
+
+type: module
+core: 8.x

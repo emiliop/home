@@ -1,0 +1,4 @@
+services:
+    hello_world.cow:
+        class: Drupal\hello_world\CowService
+        arguments: ['@current_user']

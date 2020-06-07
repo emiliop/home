@@ -1,0 +1,8 @@
+observatorio.observatorio:
+  path: '/observatorio'
+  defaults:
+    _controller: '\Drupal\observatorio\Controller\ObservatorioController::observatorio'
+    _title: 'Observatorio'
+  requirements:
+    _permission: 'access content'
+

@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+    config:
+        - core.entity_view_mode.node.teaser
+        - field.field.node.hello_content.body
+        - field.field.node.hello_content.field_test_image
+        - node.type.hello_content
+    module:
+        - user
+id: node.hello_content.teaser
+targetEntityType: node
+bundle: hello_content
+mode: teaser
+content:
+    body:
+        label: hidden
+        type: text_summary_or_trimmed
+        weight: 101
+        settings:
+            trim_length: 600
+        third_party_settings: {  }   
+    links:
+        weight: 100
+    hidden:
+        field_test_image: true
+hidden: {  }

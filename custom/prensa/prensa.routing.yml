@@ -1,0 +1,8 @@
+prensa.prensa:
+  path: '/prensa'
+  defaults:
+    _controller: '\Drupal\prensa\Controller\PrensaController::prensa'
+    _title: 'Prensa'
+  requirements:
+    _permission: 'access content'
+
