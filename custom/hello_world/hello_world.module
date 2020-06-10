@@ -42,7 +42,8 @@ function hello_world_theme() {
                         'title5' => NULL,
                         'body5' => NULL,
                         'url5' => NULL,
-                        'link5' => NULL
+                        'link5' => NULL,
+                        'arr' => NULL
                       ],
       ],
 

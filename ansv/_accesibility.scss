@@ -54,3 +54,24 @@
         }
     }
 }
+
+/*color themes*/
+
+.highContrast {
+    filter: invert(100%);
+    background-color: $black;
+}
+
+.highContrastHalfColor {
+    filter: invert(100%) hue-rotate(180deg);
+    background-color: $black;
+}
+
+.highContrastHalfColorBright {
+    filter:invert(100%) hue-rotate(180deg) brightness(4);
+    background-color: $black;
+}
+
+.grayScale{
+    filter:grayscale(1);
+}

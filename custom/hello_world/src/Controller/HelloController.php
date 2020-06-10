@@ -55,14 +55,26 @@ class HelloController extends ControllerBase {
 
   public function bye() {
 
+    $data = [];
+    $arr = [];
+
     $query = \Drupal::entityQuery('node')->condition('type', 'slider_content');
     $nids = $query->execute();
     $nodes = \Drupal\node\Entity\Node::loadMultiple($nids);
 
     foreach ($nodes as $node) {
-     $node->title->value;     
-    }
-   
+          $title = $node->field_slide_h3_title->value;
+          $body = $node->body->value;
+          $url = file_create_url($node->field_slide_image->entity->uri->value);
+          $link = $node->field_slide_link->first()->getUrl()->toString();
+          $data = ["title"=> $title,
+                  "link"=>$link,
+                  "url"=>$url,
+                  "body"=>$body,
+          ];
+          $arr[]=$data; 
+      }        
+      
     $slide1 = \Drupal::entityTypeManager()->getStorage('node')->load('8');
     $title1 = $slide1->field_slide_h3_title->value;
     $body1 = $slide1->body->value;
@@ -148,6 +160,7 @@ class HelloController extends ControllerBase {
       '#body5' => $body5,
       '#url5' => $url5,
       '#link5' => $link5,
+      '#arr' => $arr,
 
     ];
   }
