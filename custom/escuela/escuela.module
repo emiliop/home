@@ -1,0 +1,18 @@
+<?php 
+
+function escuela_theme() {
+     
+     return [
+      'escuela' => [
+        'template' => 'escuela',
+        'variables' => ['test_var' => NULL,
+                        'name' => NULL,
+                        'title' => NULL,
+                        'url' => NULL,
+                        'nombre' => NULL
+                      ],
+      ],
+      
+    ];
+ 
+}

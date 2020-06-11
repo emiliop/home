@@ -1,0 +1,6 @@
+name: ANSV seccion escuela Module
+description: Creates a page showing the ANSV escuela webpage.
+package: Custom
+
+type: module
+core: 8.x

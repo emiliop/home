@@ -1,0 +1,8 @@
+escuela.escuela:
+  path: '/escuela'
+  defaults:
+    _controller: '\Drupal\escuela\Controller\EscuelaController::escuela'
+    _title: 'Escuela'
+  requirements:
+    _permission: 'access content'
+

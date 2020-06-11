@@ -32,33 +32,16 @@ class NormativaController extends ControllerBase {
           ];
           $arr[]=$data; 
       }        
-   
-    echo json_encode($arr,JSON_UNESCAPED_SLASHES);
+      
+    $myfile = fopen('themes/contrib/bootstrap_sass/js/JSONNormativa.js', "w") or die("Unable to open file!");
+    $txt = "var normativityDocs = ";
+    fwrite($myfile, $txt);
+    fwrite($myfile, json_encode($arr,JSON_UNESCAPED_SLASHES));
+    fclose($myfile);
 
-    if (file_exists('themes/contrib/bootstrap_sass/js/JSONNormativa.js'))
-  {    
-        $myfile = fopen('themes/contrib/bootstrap_sass/js/JSONNormativa.js', "w") or die("Unable to open file!");
-        $txt = "var normativityDocs = ";
-        fwrite($myfile, $txt);
-        fwrite($myfile, json_encode($arr,JSON_UNESCAPED_SLASHES));
-        fclose($myfile);
-        echo 'file found!';
-  } 
-  else
-  {     
-        $myfile = fopen('themes/contrib/bootstrap_sass/js/JSONNormativa.js', "w") or die("Unable to open file!");
-        $txt = "var normativityDocs = ";
-        fwrite($myfile, $txt);
-        fwrite($myfile, json_encode($arr,JSON_UNESCAPED_SLASHES));
-        fclose($myfile);
-        echo 'file NOT found!';
-  } 
-    
     return [
       '#theme' => 'normativa',
     ];
   }
-
-  
 
 }
