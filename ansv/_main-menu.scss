@@ -4,13 +4,16 @@
   font-family: 'Montserrat-Regular', sans-serif;
   font-weight: 300;
   font-size: 0.8em;
-  padding: 13px 40px;
+  padding: 2px 40px;
+  float: left;
+  width: 100%;
+  margin-top: -28px;
   @include border-radius(20px);
   @include box-shadow-general;
 
   .icon-home {
     background: url("../images/icon-home.png") no-repeat;
-    background-position: 8px 1px;
+    background-position: 8px 11px;
     display: block;
     padding-left: 30px!important;
   }
@@ -19,6 +22,14 @@
 .main-menu .navbar-light .navbar-nav .active > .nav-link,
 .main-menu .navbar-light .navbar-nav .nav-link {
   color: $blue-dark;
+}
+.main-menu a.nav-link{
+  border-image: linear-gradient(to bottom, rgba(0,0,0,0) 25%,rgba(0,0,0,1) 25%,rgba(0,0,0,1) 75%,rgba(0,0,0,0) 75%);
+  border-image-slice: 1;
+  border-right: 1px solid;
+}
+.main-menu a.nav-link.last-item{
+  border-right: 0px solid;
 }
 
 .main-menu .nav-item.active {
@@ -35,13 +46,10 @@
 
 .main-menu li.nav-item,
 .main-menu li.nav-item.active {
-  border-right: 1px solid $blue-dark;
-  /*border-image: linear-gradient(to bottom, rgba(7,29,73,0) 25%,rgba(7,29,73,1) 25%,rgba(7,29,73,1) 75%,rgba(7,29,73,0) 75%); verificar para linea que divide el texto*/
   line-height: 0.7em;
   @include transition-light;
-
   a {
-    padding: 8px 4px;
+    padding: 18px 4px;
     white-space: normal;
     line-height: 1em;
     @include border-radius-light;
@@ -58,8 +66,8 @@
 
     .icon-home {
       background: url("../images/icon-home-w.png") no-repeat;
-      background-position: 8px 4px;
-      background-color: $blue-dark;
+      background-position: 8px 14px;
+      background-color: $blue-light;
     }
   }
 }
@@ -68,7 +76,7 @@
   border-right: 0;
 }
 .main-menu .dropdown-menu.show{
-background-color: $blue-light;
+background-color: rgba(7, 29, 73, .90);
 font-size: 0.9em;
 padding: 10px;
 color: $white;
@@ -76,10 +84,9 @@ color: $white;
     color: $white;
   }
   .dropdown-item{
-    //padding: 4px 2px;
     @include transition-light;
     &:hover{
-      background-color: $blue-dark;
+      background-color: $blue-light;
     }
   }
   a#navbarDropdownMenuLink{
@@ -88,32 +95,108 @@ color: $white;
   }
 }
 
+.main-menu {
+  .dropdown-menu { 
+    margin-top: 0px;
+    width:100% !important; 
+    @include border-radius(10px)
+  }
+  .dropdown { 
+    position:static !important; 
+  }
+  h2{
+    font-size: 1.8em;
+    margin-bottom: 0;
+  }
+  .col-menu{
+    border-right: solid 1px $white;
+    .dropdown-item{
+      padding: 5px;
+      
+    }
+    .dropdown-item.important-menu-item{
+      height: 100%;
+    }
+    &:last-child{
+      border-right: none;
+    }
+    p{
+      padding: 10px 0px;
+      margin-bottom: 0px;
+      line-height: 1.3em;
+    }
+
+  }
+  a{
+    .menu-image, .content-image{
+      float: left;
+      height: 100%;
+      padding: 4px;
+      width: 49%;
+    }
+    
+    img{
+      margin-top: 12px;
+      filter:grayscale(0.8);
+      width: 100%;
+      @include border-radius(6px);
+    }
+    img.sm-image{
+      width: 40px;
+      height: auto;
+      display: inline-block;
+      margin: 0;
+      @include border-radius(2px);
+    } 
+    span{
+      display: inline-block;
+      padding: 0 5px;
+      width: 60%;
+    }
+    
+    @include transition-light;
+  }
+  a:hover{
+    img{
+      filter:grayscale(0);
+    }
+  }
+  
+}
+
+div.tooltip-inner{
+  padding: 0!important;
+  width: 172px;
+}
+
+/* ---- buscador y breadcum----*/
 .navigation-alternatives {
   background: $blue-dark;
-  padding: 32px 0 0;
-  margin-top: -15px;
+  padding: 32px 0 -1px;
+  //margin-top: -15px;
 
   .breadcrumb {
     justify-content: center;
     background-color: rgba(0,0,0,0);
     color: $blue-light;
-    font-size: 0.8em;
+    font-size: 0.78em;
+    margin: 6px 0;
 
     .breadcrumb-item {
       justify-content: center;
       align-items: center;
-      font-family: 'Montserrat-SemiBold';
+      font-family: 'Montserrat-Medium';
 
       &+.breadcrumb-item {
         &::before {
           color: $blue-light;
-          content: '❯';
+          content: '\00BB';
         }
       }
 
       &:last-child {
         display: flex;
-        font-family: 'Montserrat-Black';
+        font-family: 'Montserrat-SemiBold';
       }
 
       &,
@@ -128,11 +211,9 @@ color: $white;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
   }
 
   .search-bar {
-    width: 65%;
     float: right;
     margin-right: 10px;
 
@@ -165,3 +246,4 @@ color: $white;
     }
   }
 }
+   

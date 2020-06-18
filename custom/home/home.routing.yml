@@ -1,0 +1,15 @@
+home.hello:
+  path: '/hello'
+  defaults:
+    _controller: '\Drupal\home\Controller\HomeController::hello'
+    _title: 'Home World'
+  requirements:
+    _permission: 'access content'
+
+home.bye:
+  path: '/home'
+  defaults:
+    _controller: '\Drupal\home\Controller\HomeController::bye'
+    _title: 'Bye World'
+  requirements:
+    _permission: 'access content'

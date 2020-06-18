@@ -1,0 +1,41 @@
+global-styling:
+  version: VERSION
+  js: 
+    js/popper.min.js: {}
+    js/bootstrap.min.js: {}
+    js/global.js: {}
+    js/transparencia.js: {}
+    js/JSONNews.js: {}
+    js/JSONNormativa.js: {}
+    js/normativa.js: {}
+    js/accessibility.js: {}
+    js/index.js: {}
+    js/prensa.js: {}
+    js/general.js: {}
+    js/calendar/core/main.min.js: {}
+    js/calendar/daygrid/main.min.js: {}
+    js/calendar/interaction/main.min.js: {}
+    js/calendar/timegrid/main.min.js: {}
+    js/calendar/rrule/main.min.js: {}
+    js/calendar/moment-timezone/main.min.js: {}
+    js/calendar/moment/main.min.js: {}
+    js/calendar/luxon/main.min.js: {}
+    js/calendar/list/main.min.js: {}
+    js/calendar/google-calendar/main.min.js: {}
+    js/calendar/bootstrap/main.min.js: {}
+    js/calendar/core/locales/es.js: {}
+   
+  css:
+    component:
+      css/style.css: {}
+      css/bootstrap.min.css: {}
+      css/bs4_fixes.css: {}
+      js/calendar/core/main.min.css: {}
+      js/calendar/daygrid/main.min.css: {}
+      js/calendar/timegrid/main.min.css: {}
+      js/calendar/list/main.min.css: {}
+      js/calendar/bootstrap/main.min.css: {}
+      
+  dependencies:
+    - core/jquery
+    - core/drupal

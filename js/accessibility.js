@@ -40,7 +40,7 @@ var fontIncrement = 2;
 function showAccesibility(){    
     if(allowAccesibility){ 
         //console.log("accesibility enabled");
-        $(".accesibility-container").show();         
+        jQuery(".accesibility-container").show();         
         loadVoices();
         chooseVoiceLang();                 
     }
@@ -93,7 +93,7 @@ function loadSpeechPlayer(){
             console.warn("No readable text found in Slide");
         }        
         if(readerContent){
-            $(".btn-read").show();    
+            jQuery(".btn-read").show();    
         }                     
     }
     //TODO fix comprobation on mobile -> debug
@@ -109,25 +109,25 @@ function loadSpeechPlayer(){
             console.warn("No readable found in Slide");
         }        
         if(readerContent){
-            $(".btn-read").show();    
+            jQuery(".btn-read").show();    
         }  
     }         
 }
 
 function showSpeechPlayer(){
-    $(".speechPlayer-container").show();  
-    $(".accesibility-options").toggle(); 
-    $(currentSlideText[currentSpeachText]).addClass("readerHighlight");
-    $(".btn-playText").focus();
+    jQuery(".speechPlayer-container").show();  
+    jQuery(".accesibility-options").toggle(); 
+    jQuery(currentSlideText[currentSpeachText]).addClass("readerHighlight");
+    jQuery(".btn-playText").focus();
     if(currentSlideText.length<=1){
-        $(".btn-nextText").hide();
-        $(".btn-prevText").hide();
+        jQuery(".btn-nextText").hide();
+        jQuery(".btn-prevText").hide();
     }
 
 }
 
 function selectReadText(){      
-    var selectedReadable = $("*[data-readable]");    
+    var selectedReadable = jQuery("*[data-readable]");    
     if(selectedReadable.length>0){
         currentSlideText = new Array(selectedReadable.length);
         if(selectedReadable[0].dataset.readable == 'true'){
@@ -170,25 +170,25 @@ function createSpeachObject(){
 
 
 function playCurrentText(){  
-    $(".btn-playText").html('<img class="img-fluid" src="resources/images/img_pause.png">');
+    jQuery(".btn-playText").html('<img class="img-fluid" src="resources/images/img_pause.png">');
     if(reader.speaking){               
         reader.pause();  
-        $(".btn-playText").hide();
-        $(".btn-pauseText").show();
+        jQuery(".btn-playText").hide();
+        jQuery(".btn-pauseText").show();
     }else{
 
         
-        $(currentSlideText[currentSpeachText]).addClass("readerHighlight");               
+        jQuery(currentSlideText[currentSpeachText]).addClass("readerHighlight");               
         //speak    
         reader.speak(readerContent[currentSpeachText]);
-        $(".btn-playText").html('<img class="img-fluid" src="resources/images/img_pause.png">');            
+        jQuery(".btn-playText").html('<img class="img-fluid" src="resources/images/img_pause.png">');            
         //after text end
         readerContent[currentSpeachText].onend = function() {       
-            $(".btn-playText").html('<img class="img-fluid" src="resources/images/img_play.png">');
+            jQuery(".btn-playText").html('<img class="img-fluid" src="resources/images/img_play.png">');
             if(currentSpeachText==currentSlideText.length-1){
-                $(".btn-prevText").focus();                
+                jQuery(".btn-prevText").focus();                
             }else{
-                $(".btn-nextText").focus();
+                jQuery(".btn-nextText").focus();
                 //nextText();
             }
         }
@@ -198,28 +198,28 @@ function playCurrentText(){
 
 function pauseCurrentSpeech() {
     reader.resume();
-    $(".btn-playText").show();
-    $(".btn-pauseText").hide();
-    $(".btn-playText").html('<img class="img-fluid" src="resources/images/img_pause.png">');
+    jQuery(".btn-playText").show();
+    jQuery(".btn-pauseText").hide();
+    jQuery(".btn-playText").html('<img class="img-fluid" src="resources/images/img_pause.png">');
 }
 
 function stopCurrentSpeech(){ 
     reader.cancel();          
-    $(".btn-playText").html('<img class="img-fluid" src="resources/images/img_play.png">');
-    $(".btn-playText").show();
-    $(".btn-playText").focus();    
-    $(".btn-pauseText").hide();  
-    $("*").removeClass("readerHighlight");
+    jQuery(".btn-playText").html('<img class="img-fluid" src="resources/images/img_play.png">');
+    jQuery(".btn-playText").show();
+    jQuery(".btn-playText").focus();    
+    jQuery(".btn-pauseText").hide();  
+    jQuery("*").removeClass("readerHighlight");
 }
 
 function prevText(){     
     stopCurrentSpeech();      
     currentSpeachText-=1; 
-    $(".btn-nextText").removeClass("disable");
-    $(".btn-nextText").prop("disabled",false);         
+    jQuery(".btn-nextText").removeClass("disable");
+    jQuery(".btn-nextText").prop("disabled",false);         
     if(currentSpeachText==0){        
-        $(".btn-prevText").addClass("disable");     
-        $(".btn-prevText").prop("disabled",true);  
+        jQuery(".btn-prevText").addClass("disable");     
+        jQuery(".btn-prevText").prop("disabled",true);  
     }   
     playCurrentText();  
 }
@@ -227,17 +227,17 @@ function prevText(){
 function nextText(){  
     stopCurrentSpeech();  
     currentSpeachText+=1;
-    $(".btn-prevText").prop("disabled",false);     
-    $(".btn-prevText").removeClass("disable");     
+    jQuery(".btn-prevText").prop("disabled",false);     
+    jQuery(".btn-prevText").removeClass("disable");     
     if(currentSpeachText==currentSlideText.length-1){
-        $(".btn-nextText").prop("disabled",true);
-        $(".btn-nextText").addClass("disable");
+        jQuery(".btn-nextText").prop("disabled",true);
+        jQuery(".btn-nextText").addClass("disable");
     }
     playCurrentText();    
 }
 //hide Accesibility
 function hideAccesibilityMenu(){    
-    $(".accesibility-options").hide();    
+    jQuery(".accesibility-options").hide();    
     stopReader();
 }
 
@@ -247,29 +247,29 @@ function stopReader(){
     currentSpeachText = 0;
     readerContent = "";
     stopCurrentSpeech();
-    $(".btn-read").hide();       
-    $(".speechPlayer-container").hide(); 
-    $(".btn-prevText").show();    
-    $(".btn-prevText").prop("disabled",true);     
-    $(".btn-prevText").addClass("disable"); 
-    $(".btn-nextText").show();
-    $(".btn-nextText").prop("disabled",false);
-    $(".btn-nextText").removeClass("disable");    
+    jQuery(".btn-read").hide();       
+    jQuery(".speechPlayer-container").hide(); 
+    jQuery(".btn-prevText").show();    
+    jQuery(".btn-prevText").prop("disabled",true);     
+    jQuery(".btn-prevText").addClass("disable"); 
+    jQuery(".btn-nextText").show();
+    jQuery(".btn-nextText").prop("disabled",false);
+    jQuery(".btn-nextText").removeClass("disable");    
 }
 //-------------------------------
 //show/hide Menu
 function toggleAccesibilityMenu(){
-    $(".accesibility-options").toggle();    
+    jQuery(".accesibility-options").toggle();    
     stopReader(); 
 }
 //-------------------------------
 //theme change
 function changeTheme(className){        
-    if($('body').attr('class')==className){
-        $('body').removeClass(className);
+    if(jQuery('body').attr('class')==className){
+        jQuery('body').removeClass(className);
     }
     else{
-        $('body').attr('class',className);
+        jQuery('body').attr('class',className);
     }
 }
 //-------------------------------
@@ -278,9 +278,9 @@ function changeTheme(className){
 function changeThemeRotative(){        
     themePossition++;
     themePossition=themePossition%themes.length;
-    $('body').removeAttr("class");
+    jQuery('body').removeAttr("class");
     if(themes[themePossition]!=''){
-        $('body').attr('class',themes[themePossition]);
+        jQuery('body').attr('class',themes[themePossition]);
     }
 
 }
@@ -290,15 +290,15 @@ function changeThemeRotative(){
 function resizeFont(scale){
     if(scale=="+" && fontSize <= maxfontSize ){
         fontSize+=fontIncrement;        
-        $('body').css('font-size',fontSize+"px");
+        jQuery('body').css('font-size',fontSize+"px");
     }
     if(scale=="-" && fontSize >= minfontSize ){
         fontSize-=fontIncrement;        
-        $('body').css('font-size',fontSize+"px");
+        jQuery('body').css('font-size',fontSize+"px");
     }
     if(scale=="0"){
         fontSize=18;        
-        $('body').css('font-size',"");
+        jQuery('body').css('font-size',"");
     }
 }
 //-------------------------------
@@ -318,7 +318,7 @@ function allowKeyClick(event){
     }
 }
 /*
-    $(id).on('click keypress', function(event){
+    jQuery(id).on('click keypress', function(event){
         if(allowKeyClick(event) === true){
             
         }

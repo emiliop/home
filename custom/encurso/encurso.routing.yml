@@ -1,0 +1,8 @@
+encurso.encurso:
+  path: '/encurso'
+  defaults:
+    _controller: '\Drupal\encurso\Controller\EncursoController::encurso'
+    _title: 'Encurso'
+  requirements:
+    _permission: 'access content'
+

@@ -1068,9 +1068,7 @@ var sections = [
 
 ]
 
-
-
-  jQuery(document).ready(function() {
+jQuery(document).ready(function() {
     console.log("ready! transp");
     openSection(0);
   })

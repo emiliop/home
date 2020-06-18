@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]> <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]> <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]> <html class="ie9 oldie"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+   
+    <script src="https://kit.fontawesome.com/8d0a88a433.js" crossorigin="anonymous"></script>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v7.0&appId=264047843661129&autoLogAppEvents=1"></script>
+</head>
+
+<body>
+    <!--HEADER-->
+    <header class="container-fluid">
+        <!--HEADER-->
+        <div class="row header-gov">
+            <div class="container">
+                <a href="https://www.gov.co/" target="_blank">
+                    <img src="/themes/contrib/bootstrap_sass/images/govLogo.png" alt="gov.co">
+                </a>
+                <button type="button" class="btn btn-outline-light btn-sm btn-lang">EN</button>
+            </div>
+        </div>
+        <div class="row header-institution">
+            <div class="container">
+                <a class="logo-ansv" href="/home">
+                    <img width="100%" src="/themes/contrib/bootstrap_sass/images/logoAnsv.png" alt="Agencia Nacional de Seguridad Vial">
+                </a>
+                <a class="logo-min" href="http://www.mintransporte.gov.co" target="_blank">
+                    <img width="100%" src="/themes/contrib/bootstrap_sass/images/logoMin.jpg" alt="Ministerio de trasporte">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!--/HEADER-->
+
+    <!-- accessibility buttons -->
+
+    <div class="accesibility-buttons">
+        <ul>
+            <li class="ctr-contrast" onclick="changeThemeRotative()"></li>
+            <li class="ctr-plus" onclick="resizeFont('+')"></li>
+            <li class="ctr-normal" onclick="resizeFont('0')"></li>
+            <li class="ctr-less" onclick="resizeFont('-')"></li>
+            <li class="ctr-sign"></li>
+        </ul>
+    </div>
+
+    <!-- MAIN MENU -->
+    <div id="main-menu" class="container main-menu">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav nav-fill">
+                    <li class="nav-item active">
+                        <a class="nav-link icon-home" href="/home">INICIO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Agencia
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Convocatorias</a>
+                            <a class="dropdown-item" href="#">Contratación</a>
+                            <a class="dropdown-item" href="#">Presentación Institucional</a>
+                            <a class="dropdown-item" href="#">Director</a>
+                            <a class="dropdown-item" href="#">Sistema Integrado de Gestión</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Observatorio
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">¿Que es el Observatorio?</a>
+                            <a class="dropdown-item" href="#">Redes de Observatorios</a>
+                            <a class="dropdown-item" href="#">Camaras salvavidas</a>
+                            <a class="dropdown-item" href="#">Sistemas de Información</a>
+                            <a class="dropdown-item" href="#">Geoportal</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Escuela Virtual de Seguridad Vial
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Autoridades</a>
+                            <a class="dropdown-item" href="#">Usuarios de la via</a>
+                            <a class="dropdown-item" href="#">Aliados</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Normativa</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./transparencia.html">Transparencia</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Atención a la ciudadanía
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">PQR</a>
+                            <a class="dropdown-item" href="#">Preguntas Frecuentes</a>
+                            <a class="dropdown-item" href="#">Contactenos</a>
+                            <a class="dropdown-item" href="#">Rendición de cuentas</a>
+                            <a class="dropdown-item" href="#">Mapa del sitio</a>
+                            <a class="dropdown-item" href="#">Políticas de Seguridad de la información del sitio web y
+                                protección de datos personales</a>
+                            <a class="dropdown-item" href="#">Atención Integral a víctimas</a>
+                            <a class="dropdown-item" href="#">Calendario</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./prensa.html">Prensa</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- /MAIN MENU -->
+
+    <!-- breadcrumb and search -->
+    <div class="navigation-alternatives ">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="breadcrumb" aria-label="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+                        <li class="breadcrumb-item active" aria-current="page">Agencia</li>
+                    </div>
+                </div>
+                <div class="col-sm-6 search-bar-container">
+                    <div class="search-bar input-group">
+                        <input class="form-control" type="text" placeholder="Buscar en ANSV" aria-label="Search">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="search"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /breadcrumb and search -->
+
+
+
+
+    <!-- SEC BANNER | Para cuando tengamos tiempo / deseable -->
+    <!--<section id="secondary-banner">
+    <div class="row">
+
+    </div>
+  </section>-->
+    <!-- /SEC BANNER -->
+
+        <div class="container-fluid">
+        <div class="row">
+            <div class="container agency-container">
+
+                <div class="row agency-banner">
+                    <div class="col-md-12 mt-2 mb-4">
+                        <h2 class="banner-title">AGENCIA NACIONAL DE SEGURIDAD VIAL</h2>
+                    </div>
+                    <div class="col-md-12">
+                        <h3 class="banner-body">
+                            Unidad Administrativa Especial del orden nacional, que forma parte de la Rama
+                            Ejecutiva, con
+                            personería jurídica, autonomía administrativa, financiera y patrimonio propio,
+                            adscrita al
+                            Ministerio de Transporte.
+                        </h3>
+                    </div>
+                </div>
+                <div class="row agency-content">
+                    <div class="col-md-10 offset-md-1">
+                        <div class="row">
+                            <div class="col-lg-4 agency-menu">
+                                <div class="row">
+                                    <!-- menu buttons -->
+                                    <div class="col-12 mb-4" id="agency-lvl3-buttons">
+                                        <div class="inner-menu-title">
+                                            <h3>Secciones</h3>
+                                        </div>
+                                        <div class="menu-links">
+                                            <a type="button" class="btn btn-agency" href="/mision">Misión, visión
+                                                y
+                                                valores</a>
+                                            <a type="button" class="btn btn-agency" href="/funciones">Estructura y
+                                                talento humano</a>
+                                            <a type="button" class="btn btn-agency">Contratación y convocatorias</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <ul class="row nav nav-tabs mt-5">
+                                    <li class="col-12 col-sm-6 col-md-3 nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#mission">
+                                            <h3 class="nav-title">Misión</h3>
+                                        </a>
+                                    </li>
+                                    <li class="col-12 col-sm-6 col-md-3 nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#vission">
+                                            <h3 class="nav-title">Visión</h3>
+                                        </a>
+                                    </li>
+                                    <li class="col-12 col-sm-12 col-md-3 nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#values">
+                                            <h3 class="nav-title">Valores</h3>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="tab-content">
+                                            <div id="mission" class="tab-pane active mvvp-section">
+                                                <h4 class="mvvp-title">Misión</h4>
+                                                <div class="mvvp-body"><b>La Agencia Nacional de Seguridad Vial</b> como
+                                                    máxima
+                                                    autoridad en la aplicación de la política pública del Gobierno
+                                                    Nacional,
+                                                    busca
+                                                    prevenir, reducir y controlar la siniestralidad vial, a través de
+                                                    las
+                                                    acciones
+                                                    administrativas, educativas y operativas, concientizando a los
+                                                    diversos
+                                                    niveles
+                                                    de la población e integrándola dentro de una cultura vial.
+                                                </div>
+                                            </div>
+
+                                            <div id="vission" class="tab-pane fade mvvp-section">
+                                                <h4 class="mvvp-title">Visión</h4>
+                                                <div class="mvvp-body">En el 2022 la Agencia Nacional de Seguridad Vial
+                                                    será
+                                                    un
+                                                    referente y
+                                                    líder
+                                                    de
+                                                    la política pública de seguridad vial, mediante el posicionamiento
+                                                    como
+                                                    un
+                                                    instrumento
+                                                    visible,
+                                                    en
+                                                    la prevención de la accidentalidad territorial, a través de la
+                                                    sostenibilidad en
+                                                    acciones,
+                                                    planes y
+                                                    controles eficientes, acordes al desarrollo de la tecnología y
+                                                    trabajo
+                                                    en
+                                                    equipo, de
+                                                    acuerdo con
+                                                    las
+                                                    políticas del gobierno nacional.</div>
+                                            </div>
+
+                                            <div id="values" class="tab-pane fade mvvp-section">
+                                                <h4 class="mvvp-title">Valores</h4>
+                                                <div class="mvvp-body"><b>HONESTIDAD:</b> Actuar siempre con fundamento
+                                                    en
+                                                    la
+                                                    verdad,
+                                                    cumpliendo
+                                                    nuestros deberes con transparencia y rectitud, y siempre
+                                                    favoreciendo el
+                                                    interés
+                                                    general.
+                                                    <br><br>
+                                                    <b>COMPROMISO:</b> Ser consciente de la importancia de nuestro rol
+                                                    como
+                                                    servidor
+                                                    público
+                                                    y estar
+                                                    en
+                                                    disposición permanente para comprender y resolver las necesidades de
+                                                    las
+                                                    personas
+                                                    con
+                                                    las que
+                                                    nos
+                                                    relacionamos en nuestras labores cotidianas, buscando siempre
+                                                    mejorar su
+                                                    bienestar.
+                                                    <br><br>
+                                                    <b>DILIGENCIA:</b> Cumplir con los deberes, funciones y
+                                                    responsabilidades
+                                                    asignadas
+                                                    a
+                                                    nuestro
+                                                    cargo
+                                                    de la mejor manera posible, con atención, prontitud, destreza y
+                                                    eficiencia, para
+                                                    así
+                                                    optimizar
+                                                    el
+                                                    uso de los recursos del Estado.
+                                                    <br><br>
+                                                    <b>RESPETO:</b> Reconocer, valorar y tratar de manera digna a todas
+                                                    las
+                                                    personas,
+                                                    con
+                                                    sus
+                                                    virtudes y
+                                                    defectos, sin importar su labor, su procedencia, títulos o cualquier
+                                                    otra
+                                                    condición.
+                                                    <br><br>
+                                                    <b>JUSTICIA:</b> Actuar con imparcialidad garantizando los derechos
+                                                    de
+                                                    las
+                                                    personas,
+                                                    con
+                                                    equidad,
+                                                    igualdad y sin discriminación.</div>
+
+                                                <h4 class="mvvp-title mt-5">Principios </h4>
+                                                <div class="mvvp-body"><b>CRECIMIENTO:</b> Valor de una persona dentro
+                                                    de un
+                                                    proyecto de
+                                                    vida
+                                                    que
+                                                    le ayuda a asumirlo con valentía y dignidad, ética para ayudarle a
+                                                    ser
+                                                    mejor
+                                                    cada
+                                                    día.
+                                                    <br><br>
+                                                    <b>SERVICIO CON CALIDAD:</b> Disposición permanente para dar
+                                                    oportuna y
+                                                    esmerada
+                                                    atención a los
+                                                    requerimientos internos y externos y trabajos asignados buscando la
+                                                    satisfacción
+                                                    del
+                                                    cliente.
+                                                    <br><br>
+                                                    <b>FELICIDAD:</b> Bienestar de los funcionarios de la entidad a
+                                                    través
+                                                    de un
+                                                    buen
+                                                    clima
+                                                    laboral,
+                                                    motivación y oportunidad de desarrollo profesional.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12" id="related-articles">
+                                <div class="related-articles mb-5 row">
+                                    <div class="element-event-title mt-5 mb-4 col-md-12">Información relacionada</div>
+                                    <div class="col-lg-6 my-3">
+                                        <div class="row h-100">
+                                            <div class="col-12"><a href="./articulo.html?id=0" class="related-article">
+                                                    <div class="row h-100">
+                                                        <div class="col-sm-4 col-lg-6 col-xl-5 px-0 overflow-hidden">
+                                                            <div class="event-image type-person"
+                                                                style="background-image: url('/themes/contrib/bootstrap_sass/images/image-latest-new.png')">
+                                                                <span class="event-icon"></span></div>
+                                                        </div>
+                                                        <div class="col-sm-8 col-lg-6 col-xl-7 py-3">
+                                                            <div class="event-date"><small>24/05/2020</small></div>
+                                                            <div class="event-tags-container my-2"><button
+                                                                    class="event-tag"><small>Cundinamarca</small></button><button
+                                                                    class="event-tag"><small>Covid-19</small></button><button
+                                                                    class="event-tag"><small>Secondary</small></button>
+                                                            </div>
+                                                            <div class="element-event-title mb-2"><small>Lorem ipsum
+                                                                    dolor
+                                                                    sit</small></div>
+                                                            <div class="element-event-body">Sed do eiusmod tempor
+                                                                incididunt
+                                                                ut labore et dolore magna aliqua. Ut enim ad minim
+                                                                veniam,
+                                                                quis nos...</div>
+                                                        </div>
+                                                    </div>
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 my-3">
+                                        <div class="row h-100">
+                                            <div class="col-12"><a href="./articulo.html?id=6" class="related-article">
+                                                    <div class="row h-100">
+                                                        <div class="col-sm-4 col-lg-6 col-xl-5 px-0 overflow-hidden">
+                                                            <div class="event-image type-person"
+                                                                style="background-image: url('/themes/contrib/bootstrap_sass/images/image-latest-new.png')">
+                                                                <span class="event-icon"></span></div>
+                                                        </div>
+                                                        <div class="col-sm-8 col-lg-6 col-xl-7 py-3">
+                                                            <div class="event-date"><small>12/05/2020</small></div>
+                                                            <div class="event-tags-container my-2"><button
+                                                                    class="event-tag"><small>actualidad</small></button><button
+                                                                    class="event-tag"><small>capacitación</small></button>
+                                                            </div>
+                                                            <div class="element-event-title mb-2"><small>consectetur
+                                                                    adipiscing el</small></div>
+                                                            <div class="element-event-body">Lorem ipsum dolor sit amet,
+                                                                consectetur adipiscing elit, sed do eiusmod tempor
+                                                                incididunt ut labore ...</div>
+                                                        </div>
+                                                    </div>
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer 1 -->
+
+    <section id="footer-agencia" class="container-fluid">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 d-flex align-items-center">
+                        <img class="img-fluid" src="/themes/contrib/bootstrap_sass/images/img-govierno-linea.jpg" alt="icono de gobierno en linea">
+                    </div>
+                    <div class="col-sm-4">
+                        <ul>
+                            <li><a href="#">Ministerio de Transporte </a></li>
+                            <li><a href="#">Instituto Nacional de Vias - INVIAS</a></li>
+                            <li><a href="#">Agencia Nacional de Infraestructura - ANI</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <ul>
+                            <li><a href="#">Superintendencia de Transporte </a></li>
+                            <li><a href="#">Policia Nacional</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- footer 2 -->
+
+    <footer id="footer-gov">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="img-responsive "
+                                src="https://www.mintransporte.gov.co/info/mintransporte/media/bloque2387.png"
+                                id="govco" alt="icono colombia oficial">
+                        </div>
+                        <div class="col-7 ">
+                            <ul class="list-unstyled social-list">
+                                <li>
+                                    <a class="section fa fa-facebook-f enl-fb" target="_blank"
+                                        href="https://www.facebook.com/agencianacionaldeseguridadvial/?fref=ts"
+                                        title="Enlace a Facebook"></a>
+                                </li>
+                                <li>
+                                    <a class="section fa fa-twitter enl-tw" target="_blank"
+                                        href="https://twitter.com/ansvcol" title="Enlace a Twitter"></a>
+                                </li>
+                                <li>
+                                    <a class="section fa fa-youtube enl-yt" target="_blank"
+                                        href="https://www.youtube.com/channel/UCynojn_g9TbcdPR6w1FMBDA"
+                                        title="Enlace a Youtube"></a></li>
+                                <li>
+                                    <a class="section fa fa-instagram enl-in" target="_blank"
+                                        href="https://www.instagram.com/ansvcolombia/" title="Enlace a Instagram"></a>
+                                </li>
+                                <li>
+                                    <a class="section fa fa-flickr enl-fl" target="_blank"
+                                        href="https://www.flickr.com/photos/141231580@N06" title="Enlace a Flickr"></a>
+                                </li>
+                                <!--<li>
+                  <a class="section fa fa-calendar-o" href="https://www.mintransporte.gov.co/calendario" title="Enlace a Agenda"></a>
+                </li>-->
+                                <li>
+                                    <a class="section fa fa-weixin" target="_blank" href="http://correo.ansv.gov.co/"
+                                        title="Contacto correo"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-2 text-center text-md-left ">
+                    <h6>Agencia Nacional de Seguridad Vial</h6>
+                    <p>Calle 24 # 60 - 50 Piso 9<br>Centro Comercial Gran Estación II (Bogotá, D.C - Colombia)</p>
+                </div>
+
+                <div class="col-2 text-center text-md-left">
+                    <p>Código Postal 111321</p>
+                    <h6>Teléfono conmutador</h6>
+                    <p>(+57 1) 7399080 <br>(+57 1) 3240800 op. 2</p>
+                </div>
+
+                <div class="col-3 no-padding text-center text-md-left">
+                    <!--<h6>Ingrese aquí su solicitud en línea para radicar</h6>
+
+          <p>
+            <a href="https://mintransporte.powerappsportals.com/" target="_blank">https://mintransporte.powerappsportals.com/</a>
+          </p>
+
+          <h6>Formulario para verificar excepciones de movilidad</h6>
+
+          <p>
+            <a href="https://clyt.mintransporte.gov.co/" target="_blank">https://clyt.mintransporte.gov.co/</a>
+          </p>-->
+
+                    <h6>Correo institucional</h6>
+
+                    <p>atencionalciudadano@ansv.gov.co</p>
+
+                    <h6>Correo de notificaciones judiciales</h6>
+
+                    <p>notificacionesjuridicas@ansv.gov.co</p>
+
+                    <p>Última actualización: 14 Ene 2020</p>
+                </div>
+
+                <div class="col-2 no-padding text-center text-md-left">
+
+                    <h6>Horario de atención canal virtual (PQRSD)</h6>
+
+                    <p>Lunes a viernes<br>de 8:00 a.m. - 5:00 p.m. <br>Jornada Continua</p>
+
+                    <h6>Recepción de Correspondencia</h6>
+
+                    <p>Lunes a viernes<br>de 8:00 a.m. - 4:00 p.m. <br>Jornada Continua</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  <!-- Temporal Fix -->
+  <div id="calendar-container" style="display: none"> </div>
+
+</body>
+
+</html>

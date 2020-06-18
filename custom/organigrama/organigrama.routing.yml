@@ -1,0 +1,8 @@
+organigrama.organigrama:
+  path: '/organigrama'
+  defaults:
+    _controller: '\Drupal\organigrama\Controller\OrganigramaController::organigrama'
+    _title: 'Organigrama'
+  requirements:
+    _permission: 'access content'
+

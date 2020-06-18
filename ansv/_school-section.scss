@@ -1,0 +1,192 @@
+.bg-school-section {
+  background: url("../images/img_school_page_bg.jpg") no-repeat center center / cover;
+}
+.school-container {
+  margin-bottom: 35px;
+  background-color: $yellow-semidark;
+  @include box-shadow-general;
+}
+.school-banner {
+  background: $white url("../images/img_school_banner.png") no-repeat center 100% / 175% auto;
+
+  .school-banner-title {
+    color: $blue-dark;
+    font-family: "FuturaPTDemi";
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .school-banner-description {
+    font-family: "WorkSans-Regular";
+    text-align: center;
+    font-size: 1em;
+  }
+
+  .form-control {
+    font-family: "WorkSans-Regular";
+    @include box-shadow-general;
+  }
+
+  .btn-outline-primary {
+    color: $blue-dark !important;
+    background-color: $white !important;
+    border-radius: 6px;
+    font-family: "WorkSans-Bold";
+    @include box-shadow-general;
+
+    &.btn-tab {
+      font-family: "WorkSans-Regular";
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &.btn-search {
+      &:hover {
+        background-color: $blue-light !important;
+      }
+    }
+  }
+
+  .dropdown-item {
+    font-family: "WorkSans-Regular";
+
+    &:hover {
+      background-color: $gray-semidark;
+      color: $white;
+    }
+  }
+
+  .btn-school {
+    padding-bottom: 0;
+
+    &:hover {
+      background-color: $purple-ultralight;
+    }
+  }
+}
+
+.school-container,
+.school-content {
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.school-content {
+  .carousel-title {
+    font-family: "FuturaPTDemi";
+    color: $blue-dark;
+  }
+  .carousel-description {
+    font-family: "WorkSans-Regular";
+    color: $blue-dark;
+  }
+
+  .carousel {
+    .carousel-control-prev,
+    .carousel-control-next {
+      background-color: $purple-semidark;
+
+      &:hover {
+        background-color: $purple-semidark;
+      }
+    }
+
+    .carousel-indicators {
+      width: auto;
+      left: 0;
+      margin: 0 15%;
+
+      li {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        opacity: 1;
+        margin: auto 15px;
+        border-top: none;
+        border-bottom: none;
+        @include box-shadow-general;
+
+        &.active {
+          background-color: $blue-dark;
+          border: 2px solid $white;
+        }
+      }
+    }
+  }
+
+  .item-container {
+    background-color: $yellow-semilight;
+    @include box-shadow-general;
+
+    .icon {
+      height: 70px;
+      width: 70px;
+      background: $blue-light url("../images/icon.bike.png") no-repeat center 100% / contain;
+      display: block;
+      margin: 0 0 20px -15px;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($blue-dark, 0.3) 0%,
+          rgba($blue-dark, 0.3) 47%,
+          transparent 50%
+        );
+        width: 100%;
+        height: 10px;
+        top: 100%;
+        left: 0;
+      }
+    }
+
+    .item-info {
+      color: $blue-dark;
+      line-height: 1.1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .item-title {
+      font-family: "FuturaPTHeavy";
+      font-size: 2em;
+
+      small {
+        letter-spacing: 3px;
+        font-size: 60%;
+        font-family: "FuturaPTBook";
+        display: block;
+      }
+    }
+
+    .item-description {
+      font-family: "WorkSans-Regular";
+    }
+
+    .btn-item {
+      font-family: "akzidenz-grotesk-bold";
+      border: 2px solid #ffffff;
+      border-radius: 100px;
+      box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+      padding: 10px 20px;
+      color: white;
+      background: $yellow-semidark;
+      width: max-content;
+
+      &:hover {
+        background: $yellow-dark;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .school-banner {
+    background-size: contain;
+  }
+}

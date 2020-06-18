@@ -1,0 +1,4 @@
+services:
+    home.cow:
+        class: Drupal\home\CowService
+        arguments: ['@current_user']

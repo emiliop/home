@@ -1,0 +1,6 @@
+name: ANSV seccion funciones Module
+description: Creates a page showing the ANSV funciones webpage.
+package: Custom
+
+type: module
+core: 8.x

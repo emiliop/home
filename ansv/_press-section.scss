@@ -1,6 +1,67 @@
+%recent-article-container {
+  .title-section-container {
+    h4 {
+      font-family: "FuturaPTDemi";
+      letter-spacing: 1px;
+      text-align: center;
+      margin: 30px 0 20px;
+    }
+  }
+
+  .recent-news-container {
+    border: 2px solid $gray-semilight;
+    background-color: $white;
+    border-radius: 15px;
+    padding: 10px 40px;
+    @include box-shadow-general;
+  }
+
+  .section-link {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid $gray-semilight;
+    line-height: 1.1;
+    transition: 0.3s all;
+
+    &:hover {
+      background-color: $blue-semilight;
+      text-decoration: none;
+    }
+
+    .date {
+      font-family: "WorkSans-Bold";
+      color: $blue-light;
+      margin-bottom: 10px;
+      font-size: 0.9em;
+    }
+
+    .title {
+      font-family: "WorkSans-SemiBold";
+      color: $gray-dark;
+      font-size: 0.8em;
+    }
+  }
+
+  .press-link {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: "Montserrat-Bold";
+    color: $blue-dark;
+    line-height: 1.1;
+    font-size: 0.9em;
+
+    &:hover {
+      background-color: rgba($blue-light, 0.2);
+      text-decoration: none;
+    }
+  }
+}
+
 .article-container,
 .observatory-container,
-.press-container {
+.press-container,
+.regulations-container,
+.agency-container {
   margin-bottom: 35px;
   @include box-shadow-general;
 }
@@ -10,25 +71,29 @@
 .observatory-container,
 .observatory-content,
 .press-container,
-.press-content {
+.press-content,
+.regulations-container,
+.regulations-content,
+.agency-container,
+.agency-content {
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
-
-.press-banner {
+.press-banner,
+.regulations-banner,
+.agency-banner {
   color: $white;
-  background: $white url("../images/img_press_banner.png") no-repeat center 100% / cover;
   text-align: center;
 
-  .press-banner-title {
-    font-family: 'FuturaPTDemi';
+  .banner-title {
+    font-family: "FuturaPTDemi";
     font-size: 2em;
     text-align: center;
     margin-bottom: 0;
   }
 
-  .press-banner-body {
-    font-family: 'WorkSans-Regular';
+  .banner-body {
+    font-family: "WorkSans-Regular";
     font-size: 1em;
     margin-bottom: 30px;
     padding: 0 10%;
@@ -38,15 +103,58 @@
     color: $blue-dark !important;
     background-color: $white !important;
     border-radius: 6px;
-    font-family: 'WorkSans-Regular';
+    font-family: "WorkSans-Regular";
   }
 
   .dropdown-item {
-    font-family: 'WorkSans-Regular';
+    font-family: "WorkSans-Regular";
 
     &:hover {
       background-color: $gray-semidark;
       color: $white;
+    }
+  }
+}
+.press-banner {
+  background: $white url("../images/img_press_banner.png") no-repeat center 100% / cover;
+}
+.agency-banner {
+  background: $blue-light url("../images/img_agency_banner.png") no-repeat center 0 /100% 70px;
+
+  .banner-title {
+    margin-top: 100px;
+  }
+  .banner-body {
+    margin-bottom: 50px;
+  }
+}
+.regulations-banner {
+  background: $white url("../images/img_regulations_banner.png") no-repeat center 100% / cover;
+
+  .search-bar {
+    .form-control {
+      font-size: 0.85em;
+      @include border-radius(10px);
+    }
+
+    .input-group-append {
+      margin-left: -32px;
+      z-index: 1;
+
+      span {
+        @include border-radius(50%);
+        width: 30px;
+        height: 30px;
+        margin: 2px 0 0;
+        cursor: pointer;
+        background: url("../images/icon-search.png") $blue-dark no-repeat;
+        background-position: 49% 49%;
+
+        &:hover {
+          background-color: $blue-light;
+          @include transition-light;
+        }
+      }
     }
   }
 }
@@ -61,7 +169,7 @@
   text-align: center;
 
   .observatory-banner-title {
-    font-family: 'FuturaPTBook';
+    font-family: "FuturaPTBook";
     font-size: 2em;
     text-align: center;
     margin-bottom: 0;
@@ -72,7 +180,7 @@
   }
 
   .observatory-banner-body {
-    font-family: 'WorkSans-Regular';
+    font-family: "WorkSans-Regular";
     font-size: 1em;
     margin-bottom: 30px;
     padding: 0 10%;
@@ -82,7 +190,7 @@
     color: $blue-dark !important;
     background-color: $white !important;
     border-radius: 100px;
-    font-family: 'Montserrat-Bold';
+    font-family: "Montserrat-Bold";
     margin-bottom: 70px;
 
     &:hover {
@@ -91,7 +199,7 @@
   }
 
   .dropdown-item {
-    font-family: 'WorkSans-Regular';
+    font-family: "WorkSans-Regular";
 
     &:hover {
       background-color: $gray-semidark;
@@ -160,13 +268,13 @@
       }
 
       .intro {
-        font-family: 'FuturaPTBook';
+        font-family: "FuturaPTBook";
         font-size: 1.4em;
       }
 
       .number {
         font-size: 7.5em;
-        font-family: 'FuturaPTHeavy';
+        font-family: "FuturaPTHeavy";
       }
     }
 
@@ -174,7 +282,7 @@
       background-color: $green-light-2;
 
       .lifes {
-        font-family: 'FuturaPTHeavy';
+        font-family: "FuturaPTHeavy";
         font-size: 2.5em;
         border-top: 5px solid $white;
         border-bottom: 5px solid $white;
@@ -197,7 +305,7 @@
       }
 
       .medium {
-        font-family: 'FuturaPTHeavy';
+        font-family: "FuturaPTHeavy";
         margin-top: 15px;
         font-size: 1.4em;
       }
@@ -212,7 +320,7 @@
       transition: 0.3s all;
 
       &:hover {
-        background-color: rgba($blue-dark,0.2);
+        background-color: rgba($blue-dark, 0.2);
       }
     }
 
@@ -240,7 +348,7 @@
         align-items: center;
         line-height: 1;
         text-align: center;
-        font-family: 'FuturaPTHeavy';
+        font-family: "FuturaPTHeavy";
         color: $blue-dark;
         padding: 15px;
         font-size: 1.4em;
@@ -250,7 +358,9 @@
 }
 
 .article-content,
-.press-content {
+.press-content,
+.regulations-content,
+.agency-content {
   background: $white url("../images/bg-transparency-2.png") no-repeat 100% 60%/40% auto;
 
   audio {
@@ -259,17 +369,19 @@
 
   .event-date {
     color: $blue-light;
-    font-family: 'WorkSans-Bold';
+    font-family: "WorkSans-Bold";
     font-size: 1em;
   }
 
   .event-tag {
     color: $gray-ultradark;
-    font-family: 'WorkSans-SemiBold';
+    font-family: "WorkSans-SemiBold";
     border: 1.5px solid $gray-light;
-    padding: 3px 10px;
+    padding: 1px 5px;
     border-radius: 50px;
     font-size: 0.75em;
+    //margin-top: 3px;
+    //margin-bottom: 3px;
 
     &:hover {
       background-color: $gray-ultradark;
@@ -279,6 +391,14 @@
 
     &:not(:last-child) {
       margin-right: 15px;
+    }
+
+    button {
+      padding: 0 !important;
+      margin: 0px 4px 0px 0px !important;
+    }
+    small {
+      font-size: 0.8em;
     }
   }
 
@@ -290,7 +410,7 @@
   }
 
   .element-event-title {
-    font-family: 'FuturaStd-Bold';
+    font-family: "FuturaStd-Bold";
     font-size: 1.4em;
     color: $blue-dark;
     line-height: 1.1;
@@ -298,10 +418,17 @@
 
   .element-event-body {
     color: $gray-semidark;
-    font-family: 'WorkSans-Regular';
+    font-family: "WorkSans-Regular";
     line-height: 1.3;
     font-size: 0.9em;
     margin-bottom: 20px;
+  }
+}
+.regulations-content {
+  background-image: url("../images/bg-regulations.png");
+
+  #recent-article-container {
+    @extend %recent-article-container;
   }
 }
 
@@ -314,7 +441,7 @@
 
   .caption-image {
     color: $white;
-    background: rgba($black,0.8);
+    background: rgba($black, 0.8);
     display: block;
     position: absolute;
     max-width: calc(100% - 95px);
@@ -335,73 +462,31 @@
   }
 
   #recent-article-container {
-    .title-section-container {
-      h4 {
-        font-family: 'FuturaPTDemi';
-        letter-spacing: 1px;
-        text-align: center;
-        margin: 30px 0 20px;
-      }
-    }
-
-    .recent-news-container {
-      border: 2px solid $gray-semilight;
-      background-color: $white;
-      border-radius: 15px;
-      padding: 10px 40px;
-      @include box-shadow-general;
-    }
-
-    .section-link {
-      padding-top: 20px;
-      padding-bottom: 20px;
-      border-bottom: 2px solid $gray-semilight;
-      line-height: 1.1;
-      transition: 0.3s all;
-
-      &:hover {
-        background-color: rgba($blue-light,0.2);
-        text-decoration: none;
-      }
-
-      .date {
-        font-family: 'WorkSans-Bold';
-        color: $blue-light;
-        margin-bottom: 10px;
-        font-size: 1em;
-      }
-
-      .title {
-        font-family: 'WorkSans-SemiBold';
-        color: $gray-dark;
-        font-size: 1.1em;
-      }
-    }
-
-    .press-link {
-      padding-top: 20px;
-      padding-bottom: 20px;
-      font-family: "Montserrat-Bold";
-      color: $blue-dark;
-      line-height: 1.1;
-      font-size: 1.1em;
-
-      &:hover {
-        background-color: rgba($blue-light,0.2);
-        text-decoration: none;
-      }
-    }
+    @extend %recent-article-container;
   }
-
+}
+.article-content,
+.agency-container {
   #related-articles {
     .related-article {
+      display: block;
       background-color: white;
       border: 2px solid $gray-semilight;
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
       padding: 0 15px;
       height: 100%;
+      transition: 0.4s all;
       @include box-shadow-general;
+
+      &:hover {
+        background-color: $blue-semilight;
+        text-decoration: none;
+
+        .event-image {
+          transform: scale(1.05);
+        }
+      }
     }
 
     .event-image {
@@ -410,6 +495,197 @@
       background-repeat: no-repeat;
       background-size: cover;
       min-height: 150px;
+      transition: 0.4s all;
+    }
+
+    .event-date {
+      color: $blue-dark;
+    }
+
+    .event-tag {
+      pointer-events: none;
+      background-color: transparent;
+      padding: 2px 5px;
+      font-size: 0.7em;
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.agency-container {
+  .agency-content {
+    background-image: none;
+  }
+
+  .inner-menu-title {
+    h3 {
+      font-family: "FuturaPTDemi";
+      letter-spacing: 1px;
+      text-align: center;
+      margin: 30px 0 20px;
+      color: $blue-dark;
+    }
+  }
+  .agency-menu {
+    .menu-links {
+      overflow: hidden;
+      border: 2px solid $gray-semilight;
+      background-color: $white;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include box-shadow-general;
+
+      .btn-agency {
+        color: $blue-light;
+        font-family: "WorkSans-SemiBold";
+
+        &:hover {
+          background-color: rgba($blue-light, 0.2);
+        }
+      }
+    }
+  }
+  .agency-menubar {
+    div + div {
+      &::before {
+        content: "";
+        position: absolute;
+        margin: auto;
+        left: 0;
+        border-bottom: 1px solid white;
+        width: calc(100% - 30px);
+        right: 0;
+        bottom: inherit;
+        height: 0%;
+        top: 0;
+      }
+    }
+    .link {
+      color: $white;
+      text-transform: uppercase;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      transition: 0.3s all;
+      padding: 10px;
+
+      &:hover {
+        background-color: rgba($white, 0.2);
+        text-decoration: none;
+      }
+
+      h3 {
+        font-family: "Montserrat-Regular";
+        font-size: 0.7em;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .nav-tabs {
+    border-bottom: none;
+    padding: 0 15px;
+
+    .nav-item {
+      padding: 0;
+      margin-bottom: -10px;
+
+      .nav-link {
+        padding-bottom: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: $blue-dark;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+
+        &:hover {
+          border-color: $purple-medium;
+          background-color: $purple-medium;
+        }
+      }
+
+      .nav-title {
+        color: $white;
+        font-family: "WorkSans-SemiBold";
+        font-size: 0.9em;
+        text-align: center;
+        margin-bottom: 0;
+        line-height: 1.1;
+      }
+
+      .active {
+        &.nav-link {
+          border-color: $blue-light;
+          background-color: $blue-light;
+
+          .nav-title {
+            color: $blue-dark;
+          }
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    background: $white url("../images/bg-regulations.png") no-repeat 100% 60%/40% auto;
+    padding: 25px 40px;
+    border-radius: 10px;
+    color: $blue-dark;
+    line-height: 1.3;
+
+    .mvvp-title {
+      font-family: "FuturaPTDemi";
+      letter-spacing: 1px;
+      margin: 15px 0 25px;
+    }
+  }
+
+  #image-agency {
+    .event-image {
+      height: 20vw;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 150px;
+    }
+  }
+  #event {
+    background: transparent;
+    padding: 20px 0 0;
+  }
+  .video-item {
+    display: block;
+    @include box-shadow-general;
+  }
+}
+
+@media (min-width: 768px) {
+  .agency-container {
+    .agency-menubar {
+      div + div {
+        &::before {
+          height: 30%;
+          border-left: 1px solid $white;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          border-bottom: none;
+          right: inherit;
+        }
+      }
     }
   }
 }

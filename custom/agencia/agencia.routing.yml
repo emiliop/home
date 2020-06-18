@@ -1,0 +1,8 @@
+agencia.agencia:
+  path: '/agencia'
+  defaults:
+    _controller: '\Drupal\agencia\Controller\AgenciaController::agencia'
+    _title: 'Agencia'
+  requirements:
+    _permission: 'access content'
+

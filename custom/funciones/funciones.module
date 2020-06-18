@@ -1,0 +1,18 @@
+<?php 
+
+function funciones_theme() {
+     
+     return [
+      'funciones' => [
+        'template' => 'funciones',
+        'variables' => ['test_var' => NULL,
+                        'name' => NULL,
+                        'title' => NULL,
+                        'url' => NULL,
+                        'nombre' => NULL
+                      ],
+      ],
+      
+    ];
+ 
+}

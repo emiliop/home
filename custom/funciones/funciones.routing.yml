@@ -1,0 +1,8 @@
+funciones.funciones:
+  path: '/funciones'
+  defaults:
+    _controller: '\Drupal\funciones\Controller\FuncionesController::funciones'
+    _title: 'Funciones'
+  requirements:
+    _permission: 'access content'
+

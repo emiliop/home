@@ -93,6 +93,10 @@
                 }
             }
         } 
+        ul>li.nav-item{
+            width: 48%;
+            text-align: center;
+        }
     }
     #calendar-container{
         background-color: $white;

@@ -1,0 +1,6 @@
+name: ANSV seccion organigrama Module
+description: Creates a page showing the ANSV organigrama webpage.
+package: Custom
+
+type: module
+core: 8.x

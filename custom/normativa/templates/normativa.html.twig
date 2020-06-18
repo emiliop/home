@@ -31,10 +31,10 @@
         <div class="row header-institution">
             <div class="container">
                 <a class="logo-ansv" href="./index.html">
-                    <img src="/themes/contrib/bootstrap_sass/images/logoAnsv.png" alt="Agencia Nacional de Seguridad Vial">
+                    <img width="100%" src="/themes/contrib/bootstrap_sass/images/logoAnsv.png" alt="Agencia Nacional de Seguridad Vial">
                 </a>
                 <a class="logo-min" href="http://www.mintransporte.gov.co" target="_blank">
-                    <img src="/themes/contrib/bootstrap_sass/images/logoMin.jpg" alt="Ministerio de trasporte">
+                    <img width="100%" src="/themes/contrib/bootstrap_sass/images/logoMin.jpg" alt="Ministerio de trasporte">
                 </a>
             </div>
         </div>
@@ -45,16 +45,15 @@
 
     <div class="accesibility-buttons">
         <ul>
-            <li class="ctr-contrast"></li>
-            <li class="ctr-plus"></li>
-            <li class="ctr-normal"></li>
-            <li class="ctr-less"></li>
-            <li class="ctr-sign"></li>
+            <li class="ctr-contrast" onclick="changeThemeRotative()"></li>
+            <li class="ctr-plus" onclick="resizeFont('+')"></li>
+            <li class="ctr-normal" onclick="resizeFont('0')"></li>
+            <li class="ctr-less" onclick="resizeFont('-')"></li>
         </ul>
     </div>
 
     <!-- MAIN MENU -->
-    <div class="container main-menu">
+    <div id="main-menu" class="container main-menu">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -106,7 +105,7 @@
                         <a class="nav-link" href="#">Normativa</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/transparencia>Transparencia</span></a>
+                        <a class="nav-link" href="/transparencia">Transparencia</span></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
@@ -158,21 +157,20 @@
 
 
     <!-- header and filters  -->
-    <div id="header-filters" class="container-fluid bg-gray-semilight">
+    <div id="header-filters" class="container-fluid bg-gray-semidark">
         <div class="row">
-            <div class="container press-container">
-                <div class="row press-banner">
+            <div class="container regulations-container">
+                <div class="row regulations-banner">
                     <div class="col-md-12 my-4">
-                        <h2 class="press-banner-title">NORMATIVA</h2>
+                        <h2 class="banner-title">NORMATIVA</h2>
                     </div>
                     <div class="col-md-12">
-                        <h3 class="press-banner-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod
+                        <h3 class="banner-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua</h3>
                     </div>
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-12 col-sm-4 mb-3">
+                    <div class="offset-md-1 col-md-10">
+                        <div class="row mb-0 mb-md-5">
+                            <div class="offset-2 col-8 offset-md-0 col-md-4 col-md-4 mb-3">
                                 <div class="search-bar input-group">
                                     <input class="form-control" type="text" placeholder="Buscar en ANSV"
                                         aria-label="Search">
@@ -181,10 +179,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-4 mb-3">
+                            <div class="col-md-4 mb-3">
                                 <div class="dropdown show">
-                                    <a class="btn btn-outline-primary btn-tab dropdown-toggle" href="#" role="button"
-                                        id="dropdownLocation" data-toggle="dropdown" aria-haspopup="true"
+                                    <a class="btn btn-outline-primary btn-tab mb-0 dropdown-toggle" href="#"
+                                        role="button" id="dropdownLocation" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
                                         Filtrar por
                                     </a>
@@ -197,7 +195,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-4 mb-3">
+                            <div class="col-md-4 mb-3">
                                 <div class="dropdown show">
                                     <a class="btn btn-outline-primary btn-tab dropdown-toggle" href="#" role="button"
                                         id="dropdownLocation" data-toggle="dropdown" aria-haspopup="true"
@@ -217,13 +215,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="row press-content">
-                    <div class="offset-md-1 col-md-7">
-                        <div class="row" id="news-container2">
-                        </div>
-                    </div>
-                    <div class="offset-md-1 col-md-3">
-                        <div class="row" id="recent-container">
+                <div class="row regulations-content">
+                    <div class="offset-md-1 col-md-10">
+                        <div class="row">
+                            <div id="news-container2" class="col-lg-8">
+                            </div>
+                            <div id="recent-article-container" class="col-lg-4 mb-4">
+                            </div>
                         </div>
                     </div>
                 </div>

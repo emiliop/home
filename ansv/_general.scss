@@ -1,22 +1,22 @@
 /*-------------General------------*/
 body {
-  font-family: 'Montserrat-Regular', sans-serif;
+  font-family: "Montserrat-Regular", sans-serif;
 }
 
 h1 {
-  font-family: 'FuturaPTHeavy', sans-serif;
+  font-family: "FuturaPTHeavy", sans-serif;
 }
 
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'FuturaPTMedium', sans-serif;
+  font-family: "FuturaPTMedium", sans-serif;
 }
 
 .btn-outline-primary {
   border: 1px solid $gray-light;
-  font-family: 'FuturaPTBold', sans-serif;
+  font-family: "FuturaPTBold", sans-serif;
   color: $blue-dark;
   padding: 8px 20px;
   @include border-radius(25px);
@@ -31,7 +31,7 @@ h5 {
   &.transparency-button-document,
   &.transparency-button-link {
     border: 2px solid $blue-light;
-    font-family: 'Montserrat-Regular';
+    font-family: "Montserrat-Regular";
     color: $blue-light;
     border-radius: 10px;
     position: relative;
@@ -58,24 +58,24 @@ h5 {
 
   &.transparency-button-link {
     &:before {
-      background: $blue-light url("../images/img_btn_link_white.png") no-repeat center center /70% auto;
+      background: $blue-light url("../images/img_btn_link_white.png") no-repeat center center / 70% auto;
     }
 
     &:hover {
       &:before {
-        background: $white url("../images/img_btn_link.png") no-repeat center center /70% auto;
+        background: $white url("../images/img_btn_link.png") no-repeat center center / 70% auto;
       }
     }
   }
 
   &.transparency-button-document {
     &:before {
-      background: $blue-light url("../images/img_btn_download_white.png") no-repeat center center /75% auto;
+      background: $blue-light url("../images/img_btn_download_white.png") no-repeat center center / 75% auto;
     }
 
     &:hover {
       &:before {
-        background: $white url("../images/img_btn_download.png") no-repeat center center /75% auto;
+        background: $white url("../images/img_btn_download.png") no-repeat center center / 75% auto;
       }
     }
   }
@@ -83,7 +83,7 @@ h5 {
   &.btn-blue-light {
     color: $blue-dark;
     background: $blue-light !important;
-    font-family: 'Montserrat-Bold';
+    font-family: "Montserrat-Bold";
     border-radius: 100px;
     padding: 5px 20px;
     border: none;
@@ -99,7 +99,7 @@ h5 {
 
 .badge-news {
   border: solid 1px $gray-light;
-  font-family: 'FuturaPTBold', sans-serif;
+  font-family: "FuturaPTBold", sans-serif;
   font-size: 0.7em;
   color: $gray-dark;
   margin-bottom: 16px;
@@ -111,12 +111,23 @@ h5 {
 }
 
 .btn-see-all {
-  font-family: 'FuturaPTBold', sans-serif;
+  font-family: "FuturaPTBold", sans-serif;
   text-align: center;
+}
+
+.bg-blue-light {
+  background-color: $blue-light !important;
+}
+.bg-blue-ultralight{
+  background-color: $blue-ultralight !important;
 }
 
 .bg-blue-semilight {
   background-color: $blue-semilight !important;
+}
+
+.bg-gray-semidark {
+  background-color: $gray-semidark !important;
 }
 
 .bg-gray-semilight {
@@ -183,7 +194,7 @@ hr.gray-semilight {
 
     .title {
       color: $blue-dark;
-      font-family: 'FuturaPTHeavy';
+      font-family: "FuturaPTHeavy";
       font-size: 1.1em;
       display: flex;
       align-items: center;
@@ -277,7 +288,7 @@ hr.gray-semilight {
     border-bottom-right-radius: 20px;
     content: "";
     opacity: 0;
-    background-color: rgba($white,0.2);
+    background-color: rgba($white, 0.2);
     position: absolute;
     top: 0;
     left: 0;
@@ -306,13 +317,13 @@ hr.gray-semilight {
     padding-bottom: 15px;
 
     .video-date {
-      font-family: 'WorkSans-Bold';
+      font-family: "WorkSans-Bold";
       font-size: 0.8em;
       color: $blue-dark;
     }
 
     .video-city {
-      font-family: 'WorkSans-Regular';
+      font-family: "WorkSans-Regular";
       font-size: 0.8em;
       color: $blue-light;
       text-align: right;
@@ -320,14 +331,14 @@ hr.gray-semilight {
 
     .video-title {
       margin: 10px 0;
-      font-family: 'FuturaStd-Bold';
+      font-family: "FuturaStd-Bold";
       font-size: 1.1em;
       line-height: 1.2;
       color: $blue-dark;
     }
 
     .video-description {
-      font-family: 'WorkSans-Regular';
+      font-family: "WorkSans-Regular";
       font-size: 0.9em;
       line-height: 1.2;
       color: $gray-semidark;

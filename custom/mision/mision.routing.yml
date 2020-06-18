@@ -1,0 +1,8 @@
+mision.mision:
+  path: '/mision'
+  defaults:
+    _controller: '\Drupal\mision\Controller\MisionController::mision'
+    _title: 'Mision'
+  requirements:
+    _permission: 'access content'
+

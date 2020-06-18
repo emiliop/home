@@ -1,8 +1,0 @@
-ansv.transparencia:
-  path: '/transparencia'
-  defaults:
-    _controller: '\Drupal\ansv\Controller\ANSVController::transparencia'
-    _title: 'Transparencia'
-  requirements:
-    _permission: 'access content'
-

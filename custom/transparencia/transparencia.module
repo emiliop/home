@@ -1,0 +1,18 @@
+<?php 
+
+function transparencia_theme() {
+     
+     return [
+      'transparencia' => [
+        'template' => 'transparencia',
+        'variables' => ['test_var' => NULL,
+                        'name' => NULL,
+                        'title' => NULL,
+                        'url' => NULL,
+                        'nombre' => NULL
+                      ],
+      ],
+      
+    ];
+ 
+}

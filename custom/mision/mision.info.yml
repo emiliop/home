@@ -1,0 +1,6 @@
+name: ANSV seccion mision Module
+description: Creates a page showing the ANSV mision webpage.
+package: Custom
+
+type: module
+core: 8.x

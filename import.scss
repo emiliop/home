@@ -1,0 +1,41 @@
+/* IMPORTS */
+
+//@import url(font-awesome.min.css);
+// variables
+@import "variables";
+// typography
+@import "typography";
+//bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+//material design bootstrap
+//@import "../node_modules/mdbootstrap/scss/mdb-free.scss";
+// barrio
+@import "barrio";
+
+// mixins
+@import "mixins";
+
+// custom
+
+@import "custom/product";
+
+@import "ansv/_variables";
+@import "ansv/_contextual-menu";
+@import "ansv/_fonts";
+@import "ansv/_mixins";
+@import "ansv/_accesibility";
+@import "ansv/_carousel";
+@import "ansv/_eventos";
+@import "ansv/_footer";
+@import "ansv/_general";
+@import "ansv/_header";
+@import "ansv/_local-menu";
+@import "ansv/_main-menu";
+@import "ansv/_media-query";
+@import "ansv/_modal";
+@import "ansv/_news";
+@import "ansv/_press-section";
+@import "ansv/_school-section";
+@import "ansv/_secondary-menu";
+@import "ansv/_transparency-section";
+@import "ansv/_videos";
