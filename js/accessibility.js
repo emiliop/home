@@ -278,9 +278,9 @@ function changeTheme(className){
 function changeThemeRotative(){        
     themePossition++;
     themePossition=themePossition%themes.length;
-    jQuery('body').removeAttr("class");
+    jQuery('html').removeAttr("class");
     if(themes[themePossition]!=''){
-        jQuery('body').attr('class',themes[themePossition]);
+        jQuery('html').attr('class',themes[themePossition]);
     }
 
 }
